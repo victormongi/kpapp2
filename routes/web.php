@@ -21,9 +21,7 @@ Route::get('operator', function () {
     return view('operator.index');
 });
 
-Route::get('operator/data-sekolah', function () {
-    return view('operator.data-sekolah');
-});
+Route::resource('operator/data-sekolah', 'DataSekolahController');
 
 Route::get('operator/data-kepala-sekolah', function () {
     return view('operator.data-kepala-sekolah');
