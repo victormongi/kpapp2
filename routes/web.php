@@ -15,14 +15,40 @@ Route::get('/', function () {
     return view('home');
 });
 
+// OPERATOR
+
 Route::get('operator', function () {
     return view('operator.index');
 });
 
-Route::get('kepala-sekolah', function () {
-    return view('kepala_sekolah.index');
+Route::get('operator/data-sekolah', function () {
+    return view('operator.data-sekolah');
 });
 
+Route::get('operator/data-kepala-sekolah', function () {
+    return view('operator.data-kepala-sekolah');
+});
+
+Route::get('operator/data-anggota', function () {
+    return view('operator.data-anggota');
+});
+
+Route::get('operator/data-operator', function () {
+    return view('operator.data-operator');
+});
+
+Route::get('operator/laporan', function () {
+    return view('operator.laporan');
+});
+
+// KEPALA SEKOLAH
+
+Route::get('kepala-sekolah', function () {
+    return view('kepala-sekolah.index');
+});
+
+// PTK NON PNS
+
 Route::get('ptk-non-pns', function () {
-    return view('ptk_nonpns.index');
+    return view('ptk-non-pns.index');
 });

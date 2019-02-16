@@ -40,7 +40,7 @@
 <div class="container is-fullhd">
   <div class="columns">
 
-    <div class="sidebar column is-2">
+    <div class="sidebar column is-3">
       @yield('sidebar')
     </div>
 
