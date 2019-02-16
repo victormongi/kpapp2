@@ -21310,10 +21310,6 @@ input[type=range].slider.is-danger .has-output-tooltip + output {
   width: 150px;
 }
 
-.panel-sidebar {
-  padding: 20px;
-}
-
 .main-content {
   padding: 20px;
   background-color: #f8f8f8;

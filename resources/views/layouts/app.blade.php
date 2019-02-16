@@ -17,7 +17,7 @@
           <div class="container">
             <div class="columns">
               <div class="column is-one-fifth">
-                  <img src="{{asset('images/logo-dikbud.PNG')}}" alt="" class="logo-image is-pulled-right">
+                  <img src="{{asset('images/logo-dikbud.png')}}" alt="" class="logo-image is-pulled-right">
               </div>
               <div class="column">
 
