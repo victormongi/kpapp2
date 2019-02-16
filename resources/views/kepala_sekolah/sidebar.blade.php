@@ -4,6 +4,11 @@
       Operator
     </p>
 
+
+    <a class="panel-block is-active">
+      <img src="{{ asset('images/tutwuri.png') }}" alt="">
+    </a>
+
     <a class="panel-block is-active">Dasbor </a>
     <a class="panel-block is-active">Data Diri</a>
     <a class="panel-block is-active">Laporan</a>

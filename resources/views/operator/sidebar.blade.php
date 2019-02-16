@@ -4,6 +4,10 @@
       Operator
     </p>
 
+    <div>
+      <img src="{{ asset('images/tutwuri.jpg') }}" alt="">
+    </div>
+
     <a class="panel-block is-active"> Dasbor </a>
     <a class="panel-block is-active">Data Sekolah</a>
     <a class="panel-block is-active"> Data Kepala Sekolah </a>
