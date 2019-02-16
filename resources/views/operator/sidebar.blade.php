@@ -4,15 +4,11 @@
       Operator
     </p>
 
-    <div>
-      <img src="{{ asset('images/tutwuri.jpg') }}" alt="">
-    </div>
-
-    <a class="panel-block is-active"> Dasbor </a>
-    <a class="panel-block is-active">Data Sekolah</a>
-    <a class="panel-block is-active"> Data Kepala Sekolah </a>
-    <a class="panel-block is-active">Data Anggota</a>
-    <a class="panel-block is-active">Data Operator</a>
-    <a class="panel-block is-active">Laporan</a>
+    <a class="panel-block" href="/operator">Dasbor </a>
+    <a class="panel-block" href="/operator/data-sekolah">Data Sekolah</a>
+    <a class="panel-block" href="/operator/data-kepala-sekolah">Data Kepala Sekolah </a>
+    <a class="panel-block" href="/operator/data-anggota">Data Anggota</a>
+    <a class="panel-block" href="/operator/data-operator">Data Operator</a>
+    <a class="panel-block" href="/operator/laporan">Laporan</a>
 
   </nav>
