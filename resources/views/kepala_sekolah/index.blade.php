@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Kepala Sekolah</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'Kepala Sekolah')
+
+@section('sidebar')
+   @include('kepala_sekolah.sidebar')
+@endsection
+
+@section('content')
+  <h1 class="title is-1">Data Kepala Sekolah</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam et minima, dolorem explicabo necessitatibus impedit ducimus accusantium consequuntur optio at, ipsa rem? At eveniet consectetur, non ad atque quisquam excepturi.</p>
+@endsection
