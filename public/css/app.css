@@ -27016,3 +27016,11 @@ readers do not read off random characters that represent icons */
   margin-top: 20px;
 }
 
+.kolom-nama {
+  width: 30%;
+}
+
+.kolom-nama-separator {
+  width: 2%;
+}
+

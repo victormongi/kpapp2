@@ -22,14 +22,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-            <td> <a href="/operator/data-sekolah-detail">Nama Sekolah</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        @foreach ($dataSekolah as $sekolah)
+            <tr>
+                <td>{{ $sekolah->id }}</td>
+                <td> <a href="/operator/data-sekolah-detail?nama-sekolah={{$sekolah->nama_sekolah}}">{{ $sekolah->nama_sekolah }}</a></td>
+                <td>{{$sekolah->wilayah}}</td>
+                <td>{{$sekolah->npsn}}</td>
+                <td>{{$sekolah->bentuk_pendidikan}}</td>
+                <td>{{$sekolah->bentuk_sekolah}}</td>
+            </tr>
+        @endforeach
     </tbody>
 </table>
 </div>
