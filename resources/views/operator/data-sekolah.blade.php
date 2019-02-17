@@ -19,6 +19,7 @@
     </div>
 @endif
 
+<div class="column is-5">
 <form action="/operator/data-sekolah" method="POST">
     @csrf
     <div class="field">
@@ -141,10 +142,12 @@
 
 
 </form>
+</div>
 
 <br><br>
 
-<table class="table">
+<div>
+<table id="data-table" class="table is-fullwidth">
     <thead>
         <tr>
             <th><abbr title="Position">No.</abbr></th>
@@ -207,5 +210,7 @@
         </tr>
     </tbody>
 </table>
+</div>
+
 
 @endsection
