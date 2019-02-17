@@ -10,7 +10,8 @@
 <h1 class="title is-1">Data Kepala Sekolah</h1>
 
 <button class="button is-primary is-large" @click="toggleShow">Tambah Data Kepala Sekolah</button>
-    <div class="column is-5" v-show="formShow">    <form action="/operator/data-kepala-sekolah" method="POST">
+    <div class="column is-5" v-show="formShow">
+        <form action="/operator/data-kepala-sekolah" method="post" enctype="multipart/form-data">
         @csrf
         <div class="field">
             <label class="label" for="nama_kepala_sekolah">Nama</label>
