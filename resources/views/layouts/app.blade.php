@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<Body>
     <div id="app">
         <div class="container is-fullhd">
             <section class="hero is-warning">
