@@ -12,7 +12,7 @@
 <button class="button is-primary is-large" @click="toggleShow">Tambah Data Anggota</button>
 
 <div class="column is-5" v-show="formShow">
-    <form action="/operator/data-anggota" method="POST">
+    <form action="/operator/data-operator" method="post">
         @csrf
         <div class="field">
             <label class="label" for="nama_operator">Nama Operator</label>
@@ -63,12 +63,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        @foreach ($dataOperator as $operator)
+            <tr>
+                <td></td>
+                <td>{{$operator->nama_operator}}</td>
+                <td>{{$operator->nama_pengguna}}</td>
+                <td>
+
+
+                </td>
+            </tr>
+        @endforeach
     </tbody>
 </table>
 

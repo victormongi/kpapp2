@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataOperator;
 use Illuminate\Http\Request;
 
 class DataOperatorController extends Controller
@@ -13,7 +14,9 @@ class DataOperatorController extends Controller
      */
     public function index()
     {
-        return view('operator.data-operator');
+        $dataOperator = DataOperator::all();
+        // dd($dataOperator);
+        return view('operator.data-operator', compact('dataOperator'));
     }
 
     /**
@@ -36,20 +39,20 @@ class DataOperatorController extends Controller
     {
         // dd($request->post());
         $data_anggota = $request->validate([
-            "nama_operator" => "required",
+            "nama_operator" => "required|min:5",
             "nama_pengguna" => "required",
             "kata_sandi" => "required",
         ]);
-        
-        DataAnggota::create(
+
+        DataOperator::create(
             [
-            "nama_operator" =>$request->post("nama_operator"),
-            "nama_pengguna" =>$request->post("nama_pengguna"),
-            "kata_sandi" =>$request->post("kata_sandi"),
+                "nama_operator" => $request->post("nama_operator"),
+                "nama_pengguna" => $request->post("nama_pengguna"),
+                "kata_sandi" => $request->post("kata_sandi"),
             ]
         );
         // dd($data_operator);
-        return back()->with('sukses berhasil dinput');
+        return back()->with('message', 'sukses berhasil dinput');
     }
 
     /**

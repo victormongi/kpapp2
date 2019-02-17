@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataKepalaSekolah;
 use Illuminate\Http\Request;
 
 class DataKepalaSekolahController extends Controller
@@ -35,7 +36,7 @@ class DataKepalaSekolahController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->post());
+        // dd($request->post());
         $data_kepala_sekolah = $request->validate([
             "nama_kepala_sekolah" => "required",
             "alamat" => "required",
@@ -50,27 +51,26 @@ class DataKepalaSekolahController extends Controller
 
         $image = $request->file('foto_url');
 
-        $filename = time().'.'.$image->getClientOriginalExtension();
-        
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+
         $destinationPath = public_path('/images');
 
         $image->move($destinationPath, $filename);
 
-        
-        DataAnggota::create(
+        DataKepalaSekolah::create(
             [
-            "nama_kepala_sekolah" =>$request->post("nama_kepala_sekolah"),
-            "alamat" =>$request->post("alamat"),
-            "nomor_hp" =>$request->post("nomor_hp"),
-            "wilayah" =>$request->post("wilayah"),
-            "bentuk_pendidikan" =>$request->post("bentuk_pendidikan"),
-            "nama_sekolah" =>$request->post("nama_sekolah"),
-            "nama_pengguna" =>$request->post("nama_pengguna"),
-            "kata_sandi" =>$request->post("kata_sandi"),
-            "foto_url" =>$filename
+                "nama_kepala_sekolah" => $request->post("nama_kepala_sekolah"),
+                "alamat" => $request->post("alamat"),
+                "nomor_hp" => $request->post("nomor_hp"),
+                "wilayah" => $request->post("wilayah"),
+                "bentuk_pendidikan" => $request->post("bentuk_pendidikan"),
+                "nama_sekolah" => $request->post("nama_sekolah"),
+                "nama_pengguna" => $request->post("nama_pengguna"),
+                "kata_sandi" => $request->post("kata_sandi"),
+                "foto_url" => $filename,
             ]
         );
-        // dd($data_kepala_sekolah);
+        // dd($filename);
         return back()->with('sukses berhasil dinput');
     }
 
