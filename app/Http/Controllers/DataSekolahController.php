@@ -102,7 +102,9 @@ class DataSekolahController extends Controller
      */
     public function edit($id)
     {
-        //
+        $s = DataSekolah::where('id_data_sekolah', $id)->firstOrFail();
+        // dd($dataSekolah);
+        return view('operator.data-sekolah-edit', compact('s'));
     }
 
     /**
@@ -114,7 +116,23 @@ class DataSekolahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            "nama_sekolah" => "required",
+            "akreditasi" => "required",
+            "kurikulum" => "required",
+            "alamat" => "required",
+            "wilayah" => "required",
+            "npsn" => "required",
+            "bentuk_sekolah" => "required",
+            "bentuk_pendidikan" => "required",
+            "status_kepemilikan" => "required",
+            "sk_pendirian_sekolah" => "required",
+            "tanggal_sk_pendirian" => "required",
+            "sk_izin_operasional" => "required",
+            "tanggal_sk_izin_operasional" => "required",
+        ]);
+        DataSekolah::findOrFail($id)->update($data);
+        return back()->with('message', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -125,6 +143,11 @@ class DataSekolahController extends Controller
      */
     public function destroy($id)
     {
+
+        $dataSekolah = DataSekolah::where('id_data_sekolah', $id)->firstOrFail();
+        $dataSekolah->delete();
+
+        return back();
         //
     }
 
