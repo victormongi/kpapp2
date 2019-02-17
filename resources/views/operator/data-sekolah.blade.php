@@ -31,28 +31,28 @@
     <div class="field">
         <label class="label" for="akreditasi">Akreditasi</label>
         <div class="control">
-            <input class="input" type="text" id="akreditasi" name="akreditasi" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="akreditasi" name="akreditasi" value="{{ old('akreditasi') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="kurikulum">Kurikulum</label>
         <div class="control">
-            <input class="input" type="text" id="kurikulum" name="kurikulum" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="kurikulum" name="kurikulum" value="{{ old('kurikulum') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="alamat">Alamat</label>
         <div class="control">
-            <input class="input" type="text" id="alamat" name="alamat" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="alamat" name="alamat" value="{{ old('alamat') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="wilayah">Wilayah</label>
         <div class="select">
-            <select id="wilayah" name="wilayah" value="{{ old('nama_sekolah') }}">
+            <select id="wilayah" name="wilayah" value="{{ old('wilayah') }}">
                 <option>Pilih Wilayah</option>
                 <option value="Tomohon Utara">Kec. Tomohon Utara</option>
                 <option value="Tomohon Selatan">Kec. Tomohon Selatan</option>
@@ -66,17 +66,17 @@
     <div class="field">
         <label class="label" for="npsn">NPSN</label>
         <div class="control">
-            <input class="input" type="text" id="npsn" name="npsn" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="npsn" name="npsn" value="{{ old('npsn') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="bentuk_sekolah">Bentuk Sekolah</label>
         <div class="select">
-            <select id="bentuk_sekolah" name="bentuk_sekolah" value="{{ old('nama_sekolah') }}">
+            <select id="bentuk_sekolah" name="bentuk_sekolah" value="{{ old('bentuk_sekolah') }}">
                 <option>Pilih Bentuk Sekolah</option>
-                <option>Negeri</option>
-                <option>Swasta</option>
+                <option value="negeri">Negeri</option>
+                <option value="swasta">Swasta</option>
             </select>
         </div>
     </div>
@@ -84,11 +84,11 @@
     <div class="field">
         <label class="label" for="bentuk_pendidikan">Bentuk Pendidikan</label>
         <div class="select">
-            <select id="bentuk_pendidikan" name="bentuk_pendidikan" value="{{ old('nama_sekolah') }}">
+            <select id="bentuk_pendidikan" name="bentuk_pendidikan" value="{{ old('bentuk_pendidikan') }}">
                 <option>Pilih Bentuk Pendidikan</option>
-                <option>TK/PAUD</option>
-                <option>SD</option>
-                <option>SMP</option>
+                <option value="tk-paud">TK/PAUD</option>
+                <option value="sd">SD</option>
+                <option value="smp">SMP</option>
             </select>
         </div>
     </div>
@@ -96,35 +96,35 @@
     <div class="field">
         <label class="label" for="status_kepemilikan">Status Kepemilikan</label>
         <div class="control">
-            <input class="input" type="text" id="status_kepemilikan" name="status_kepemilikan" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="status_kepemilikan" name="status_kepemilikan" value="{{ old('status_kepemilikan') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="sk_pendirian_sekolah">SK Pendirian Sekolah</label>
         <div class="control">
-            <input class="input" type="text" id="sk_pendirian_sekolah" name="sk_pendirian_sekolah" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="sk_pendirian_sekolah" name="sk_pendirian_sekolah" value="{{ old('sk_pendirian_sekolah') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="tanggal_sk_pendirian">Tanggal SK Pendirian</label>
         <div class="control">
-            <input class="input" type="date" id="tanggal_sk_pendirian" name="tanggal_sk_pendirian" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="date" id="tanggal_sk_pendirian" name="tanggal_sk_pendirian" value="{{ old('tanggal_sk_pendirian') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="sk_izin_operasional">SK Izin Operasional</label>
         <div class="control">
-            <input class="input" type="text" id="sk_izin_operasional" name="sk_izin_operasional" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="text" id="sk_izin_operasional" name="sk_izin_operasional" value="{{ old('sk_izin_operasional') }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label" for="tanggal_sk_izin_operasional">Tanggal SK Izin Operasional</label>
         <div class="control">
-            <input class="input" type="date" id="tanggal_sk_izin_operasional" name="tanggal_sk_izin_operasional" value="{{ old('nama_sekolah') }}">
+            <input class="input" type="date" id="tanggal_sk_izin_operasional" name="tanggal_sk_izin_operasional" value="{{ old('tanggal_sk_izin_operasional') }}">
         </div>
     </div>
 
