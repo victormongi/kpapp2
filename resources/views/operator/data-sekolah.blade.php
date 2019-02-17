@@ -152,7 +152,7 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Utara</a></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=tomohonutara">Kec. Tomohon Utara</a></td>
             <td></td>
             <td></td>
             <td></td>
