@@ -63001,6 +63001,7 @@ var app = new Vue({
   },
   methods: {
     toggleShow: function toggleShow() {
+      console.log('this fires');
       this.formShow = !this.formShow;
     }
   }

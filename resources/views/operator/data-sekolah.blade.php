@@ -21,8 +21,7 @@
 
 <button class="button is-primary is-large" @click="toggleShow">Tambah Data Sekolah</button>
 
-<template v-show="formShow">
-    <div class="column is-5">
+    <div class="column is-5" v-show="formShow">
         <form action="/operator/data-sekolah" method="POST">
             @csrf
             <div class="field">
@@ -147,7 +146,6 @@
 
         </form>
     </div>
-</template>
 
 <br><br>
 

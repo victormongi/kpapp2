@@ -24,7 +24,8 @@ const app = new Vue({
     },
     methods: {
         toggleShow () {
-            this.formShow = !this.formShow
+            console.log('this fires')
+            this.formShow = ! this.formShow
         }
     },
 
