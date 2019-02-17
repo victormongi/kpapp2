@@ -41,9 +41,11 @@ Route::get('operator/data-kepala-sekolah-detail', function () {
     return view('operator.data-kepala-sekolah-detail');
 });
 
-Route::get('operator/data-anggota', function () {
-    return view('operator.data-anggota');
-});
+Route::resource('operator/data-anggota', 'DataAnggotaController');
+
+Route::get('operator/data-anggota-kecamatan', 'DataAnggotaController@getDataAnggotaByKecamatan');
+
+Route::get('operator/data-anggota-detail', 'DataAnggotaController@getDetailAnggotaByNamaAnggota');
 
 Route::get('operator/data-anggota-kecamatan', function () {
     return view('operator.data-anggota-kecamatan');

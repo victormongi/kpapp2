@@ -19,6 +19,7 @@
             <th><abbr title="Position">NPSN</abbr></th>
             <th><abbr title="Position">Bentuk Pendidikan</abbr></th>
             <th><abbr title="Position">Status</abbr></th>
+            <th><abbr title="Position">Opsi</abbr></th>
         </tr>
     </thead>
     <tbody>
@@ -30,6 +31,9 @@
                 <td>{{$sekolah->npsn}}</td>
                 <td>{{$sekolah->bentuk_pendidikan}}</td>
                 <td>{{$sekolah->bentuk_sekolah}}</td>
+                <td>
+                    <form action="/operator/data-sekolah" method="GET"></form>
+                </td>
             </tr>
         @endforeach
     </tbody>
