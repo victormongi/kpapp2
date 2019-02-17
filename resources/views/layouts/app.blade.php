@@ -50,6 +50,7 @@
             </div>
 
             <div class="column is-9 main-content mt-4">
+                @include('layouts.error')
                 @yield('content')
             </div>
 

@@ -9,16 +9,6 @@
 @section('content')
 <h1 class="title is-1">Data Sekolah</h1>
 
-@if ($errors->any())
-    <div class="notification is-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <div class="column is-5">
 <form action="/operator/data-sekolah" method="POST">
     @csrf
@@ -147,7 +137,7 @@
 <br><br>
 
 <div>
-<table id="data-table" class="table is-fullwidth">
+<table class="table is-fullwidth">
     <thead>
         <tr>
             <th><abbr title="Position">No.</abbr></th>
@@ -162,7 +152,7 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td>Kec. Tomohon Utara</td>
+            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Utara</a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -170,7 +160,7 @@
         </tr>
         <tr>
             <td>2</td>
-            <td>Kec. Tomohon Selatan</td>
+            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Selatan</a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -178,15 +168,7 @@
         </tr>
         <tr>
             <td>3</td>
-            <td>Kec. Tomohon Tengah</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Kec. Tomohon Barat</td>
+            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Tengah</a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -194,7 +176,15 @@
         </tr>
         <tr>
             <td>5</td>
-            <td>Kec. Tomohon Selatan</td>
+            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Barat</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Timur</a></td>
             <td></td>
             <td></td>
             <td></td>

@@ -23,12 +23,36 @@ Route::get('operator', function () {
 
 Route::resource('operator/data-sekolah', 'DataSekolahController');
 
+Route::get('operator/data-sekolah-kecamatan', function () {
+    return view('operator.data-sekolah-kecamatan');
+});
+
+Route::get('operator/data-sekolah-detail', function () {
+    return view('operator.data-sekolah-detail');
+});
+
 Route::get('operator/data-kepala-sekolah', function () {
     return view('operator.data-kepala-sekolah');
 });
 
+Route::get('operator/data-kepala-sekolah-kecamatan', function () {
+    return view('operator.data-kepala-sekolah-kecamatan');
+});
+
+Route::get('operator/data-kepala-sekolah-detail', function () {
+    return view('operator.data-kepala-sekolah-detail');
+});
+
 Route::get('operator/data-anggota', function () {
     return view('operator.data-anggota');
+});
+
+Route::get('operator/data-anggota-kecamatan', function () {
+    return view('operator.data-anggota-kecamatan');
+});
+
+Route::get('operator/data-anggota-detail', function () {
+    return view('operator.data-anggota-detail');
 });
 
 Route::get('operator/data-operator', function () {

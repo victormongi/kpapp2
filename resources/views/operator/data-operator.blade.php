@@ -47,7 +47,9 @@
 
 </form>
 
-<table class="table">
+<br><br>
+
+<table class="table is-fullwidth">
     <thead>
         <tr>
             <th><abbr title="Position">No.</abbr></th>
