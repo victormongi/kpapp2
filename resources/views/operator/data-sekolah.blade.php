@@ -165,51 +165,51 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="/operator/data-sekolah-kecamatan?kec=tomohonutara">Kec. Tomohon Utara</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
+            <td>{{ $dataSekolah2->jumlahSekolahTomohonUtara }}</td>
+            <td>{{ $dataSekolah2->jumlahTKTomohonUtara }}</td>
+            <td>{{ $dataSekolah2->jumlahSDTomohonUtara }}</td>
+            <td>{{ $dataSekolah2->jumlahSMPTomohonUtara }}</td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Selatan</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=Tomohon%20Selatan">Kec. Tomohon Selatan</a></td>
+            <td>{{ $dataSekolah2->jumlahSekolahTomohonSelatan }}</td>
+            <td>{{ $dataSekolah2->jumlahTKTomohonSelatan }}</td>
+            <td>{{ $dataSekolah2->jumlahSDTomohonSelatan }}</td>
+            <td>{{ $dataSekolah2->jumlahSMPTomohonSelatan }}</td>
         </tr>
         <tr>
             <td>3</td>
-            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Tengah</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=Tomohon%20Tengah">Kec. Tomohon Tengah</a></td>
+            <td>{{ $dataSekolah2->jumlahSekolahTomohonTengah }}</td>
+            <td>{{ $dataSekolah2->jumlahTKTomohonTengah }}</td>
+            <td>{{ $dataSekolah2->jumlahSDTomohonTengah }}</td>
+            <td>{{ $dataSekolah2->jumlahSMPTomohonTengah }}</td>
         </tr>
         <tr>
             <td>5</td>
-            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Barat</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=Tomohon%20Barat">Kec. Tomohon Barat</a></td>
+            <td>{{ $dataSekolah2->jumlahSekolahTomohonBarat }}</td>
+            <td>{{ $dataSekolah2->jumlahTKTomohonBarat }}</td>
+            <td>{{ $dataSekolah2->jumlahSDTomohonBarat }}</td>
+            <td>{{ $dataSekolah2->jumlahSMPTomohonBarat }}</td>
         </tr>
         <tr>
             <td>4</td>
-            <td><a href="/operator/data-sekolah-kecamatan">Kec. Tomohon Timur</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/operator/data-sekolah-kecamatan?kec=Tomohon%20Timur">Kec. Tomohon Timur</a></td>
+            <td>{{ $dataSekolah2->jumlahSekolahTomohonTimur }}</td>
+            <td>{{ $dataSekolah2->jumlahTKTomohonTimur }}</td>
+            <td>{{ $dataSekolah2->jumlahSDTomohonTimur }}</td>
+            <td>{{ $dataSekolah2->jumlahSMPTomohonTimur }}</td>
         </tr>
         <tr>
             <td></td>
             <th>Total</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ $dataSekolah2->totalSekolah }}</td>
+            <td>{{ $dataSekolah2->totalTK }}</td>
+            <td>{{ $dataSekolah2->totalSD }}</td>
+            <td>{{ $dataSekolah2->totalSMP }}</td>
         </tr>
     </tbody>
 </table>

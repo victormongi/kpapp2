@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,13 +25,9 @@ Route::get('operator', function () {
 
 Route::resource('operator/data-sekolah', 'DataSekolahController');
 
-Route::get('operator/data-sekolah-kecamatan', function () {
-    return view('operator.data-sekolah-kecamatan');
-});
+Route::get('operator/data-sekolah-kecamatan', 'DataSekolahController@getDataSekolahByKecamatan');
 
-Route::get('operator/data-sekolah-detail', function () {
-    return view('operator.data-sekolah-detail');
-});
+Route::get('operator/data-sekolah-detail', 'DataSekolahController@getDetailSekolahByNamaSekolah');
 
 Route::get('operator/data-kepala-sekolah', function () {
     return view('operator.data-kepala-sekolah');
