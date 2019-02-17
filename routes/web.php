@@ -45,8 +45,24 @@ Route::get('kepala-sekolah', function () {
     return view('kepala-sekolah.index');
 });
 
+Route::get('kepala-sekolah/data-diri', function () {
+    return view('kepala-sekolah.data-diri');
+});
+
+Route::get('kepala-sekolah/laporan', function () {
+    return view('kepala-sekolah.laporan');
+});
+
 // PTK NON PNS
 
 Route::get('ptk-non-pns', function () {
     return view('ptk-non-pns.index');
+});
+
+Route::get('ptk-non-pns/data-diri', function () {
+    return view('ptk-non-pns.data-diri');
+});
+
+Route::get('ptk-non-pns/laporan', function () {
+    return view('ptk-non-pns.laporan');
 });

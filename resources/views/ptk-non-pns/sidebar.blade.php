@@ -20,8 +20,8 @@
   </a>
   
 
-  <a class="panel-block">Dasbor </a>
-  <a class="panel-block">Data Diri</a>
-  <a class="panel-block">Laporan</a>
+  <a class="panel-block" href="/ptk-non-pns">Dasbor </a>
+  <a class="panel-block" href="/ptk-non-pns/data-diri">Data Diri</a>
+  <a class="panel-block" href="/ptk-non-pns/laporan">Laporan</a>
 
 </nav>
