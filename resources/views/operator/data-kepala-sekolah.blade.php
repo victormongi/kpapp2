@@ -81,7 +81,7 @@
         <div class="field">
             <label class="label" for="kata_sandi">Kata Sandi/ <br> <i>Password</i> </label>
             <div class="control">
-                <input class="input" type="text" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
+                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
             </div>
         </div>
 
