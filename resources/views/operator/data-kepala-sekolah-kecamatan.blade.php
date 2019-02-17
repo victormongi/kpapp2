@@ -14,11 +14,11 @@
     <thead>
         <tr>
             <th><abbr title="Position">No.</abbr></th>
+            <th><abbr title="Position">Nama</abbr></th>
             <th><abbr title="Position">Nama Sekolah</abbr></th>
-            <th><abbr title="Position">Wilayah</abbr></th>
-            <th><abbr title="Position">NPSN</abbr></th>
-            <th><abbr title="Position">Bentuk Pendidikan</abbr></th>
-            <th><abbr title="Position">Status</abbr></th>
+            <th><abbr title="Position">Alamat</abbr></th>
+            <th><abbr title="Position">Nomor HP</abbr></th>
+            <th><abbr title="Position">Opsi</abbr></th>
         </tr>
     </thead>
     <tbody>
