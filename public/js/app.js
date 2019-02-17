@@ -62995,7 +62995,15 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue"));
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    formShow: false
+  },
+  methods: {
+    toggleShow: function toggleShow() {
+      this.formShow = !this.formShow;
+    }
+  }
 }); // Bulma NavBar Burger Script
 
 document.addEventListener('DOMContentLoaded', function () {
