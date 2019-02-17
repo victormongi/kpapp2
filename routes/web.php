@@ -23,7 +23,7 @@ Route::get('operator', function () {
 
 Route::resource('operator/data-sekolah', 'DataSekolahController');
 
-Route::get('operator/data-sekolah-kecamatan', function (Request) {
+Route::get('operator/data-sekolah-kecamatan', function () {
     return view('operator.data-sekolah-kecamatan');
 });
 

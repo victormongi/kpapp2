@@ -89,9 +89,9 @@
                 <div class="select">
                     <select id="bentuk_pendidikan" name="bentuk_pendidikan" value="{{ old('bentuk_pendidikan') }}">
                         <option>Pilih Bentuk Pendidikan</option>
-                        <option value="tk-paud">TK/PAUD</option>
-                        <option value="sd">SD</option>
-                        <option value="smp">SMP</option>
+                        <option value="TK/PAUD">TK/PAUD</option>
+                        <option value="SD">SD</option>
+                        <option value="SMP">SMP</option>
                     </select>
                 </div>
             </div>
