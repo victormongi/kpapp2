@@ -31,9 +31,7 @@ Route::get('operator/data-sekolah-detail', 'DataSekolahController@getDetailSekol
 
 Route::resource('operator/data-kepala-sekolah', 'DataKepalaSekolahController');
 
-Route::get('operator/data-kepala-sekolah-kecamatan', function () {
-    return view('operator.data-kepala-sekolah-kecamatan');
-});
+Route::get('operator/data-kepala-sekolah-kecamatan', 'DataKepalaSekolahController@getKepalaSekolahByKecamatan');
 
 Route::get('operator/data-kepala-sekolah-detail', function () {
     return view('operator.data-kepala-sekolah-detail');

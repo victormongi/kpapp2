@@ -22,14 +22,28 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-            <td> <a href="/operator/data-kepala-sekolah-detail">Nama Sekolah</a></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        @foreach ($kepalaSekolah as $key => $s)
+
+            <tr>
+                <td>{{++$key}}</td>
+                <td>{{$s->nama_kepala_sekolah}}</td>
+                <td>{{$s->nama_sekolah}}</td>
+                <td>{{$s->alamat}}</td>
+                <td>{{$s->nomor_hp}}</td>
+                <td>
+
+                    <a class="button is-info is-small" href="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}/edit">Edit</a>
+
+                    <form action="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}" method="post">
+                        {{method_field('DELETE')}}
+                        @csrf
+                        <input type="submit" class="button is-danger is-small" value="Hapus" />
+                    </form>
+
+                </td>
+            </tr>
+
+        @endforeach
     </tbody>
 </table>
 </div>

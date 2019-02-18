@@ -9,30 +9,28 @@
 @section('content')
 <h1 class="title is-1">Data Kepala Sekolah</h1>
 
-<button class="button is-primary is-large" @click="toggleShow">Tambah Data Kepala Sekolah</button>
-    <div class="column is-5" v-show="formShow">
-        <form action="/operator/data-kepala-sekolah" method="post" enctype="multipart/form-data">
-
+<div class="column is-5">
+    <form action="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}" method="post" enctype="multipart/form-data">
         @csrf
-
+        @method('PATCH')
         <div class="field">
             <label class="label" for="nama_kepala_sekolah">Nama</label>
             <div class="control">
-                <input class="input" type="text" id="nama_kepala_sekolah" name="nama_kepala_sekolah" value="{{ old('nama_kepala_sekolah') }}">
+                <input class="input" type="text" id="nama_kepala_sekolah" name="nama_kepala_sekolah" value="{{$s->nama_kepala_sekolah}}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="alamat">Alamat</label>
             <div class="control">
-                <input class="input" type="text" id="alamat" name="alamat" value="{{ old('alamat') }}">
+                <input class="input" type="text" id="alamat" name="alamat" value="{{$s->alamat}}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="nomor_hp">Nomor HP</label>
             <div class="control">
-                <input class="input" type="text" id="nomor_hp" name="nomor_hp" value="{{ old('nomor_hp') }}">
+                <input class="input" type="text" id="nomor_hp" name="nomor_hp" value="{{$s->nomor_hp}}">
             </div>
         </div>
 
@@ -128,55 +126,6 @@
     </form>
 
 </div>
-
-<br><br>
-
-<div class="box">
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <th><abbr title="Position">No.</abbr></th>
-                <th><abbr title="Position">Wilayah</abbr></th>
-                <th><abbr title="Position">Jumlah</abbr></th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Selatan</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Tengah</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Barat</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Timur</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <th><abbr title="Position">Total</abbr></th>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
 
 
 @endsection

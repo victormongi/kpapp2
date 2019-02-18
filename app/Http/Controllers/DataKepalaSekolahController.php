@@ -15,7 +15,6 @@ class DataKepalaSekolahController extends Controller
     public function index()
     {
         return view('operator.data-kepala-sekolah');
-
     }
 
     /**
@@ -93,6 +92,9 @@ class DataKepalaSekolahController extends Controller
      */
     public function edit($id)
     {
+        $s = DataKepalaSekolah::where('id_data_kepala_sekolah', $id)->firstOrFail();
+        // dd($s);
+        return view('operator.data-kepala-sekolah-edit', compact('s'));
         //
     }
 
@@ -105,7 +107,31 @@ class DataKepalaSekolahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $image = $request->file('foto_url');
+
+        if ($image) {
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images');
+
+            $image->move($destinationPath, $filename);
+        }
+
+        $dataKepalaSekolah = $request->validate([
+            "nama_kepala_sekolah" => "required",
+            "alamat" => "required",
+            "nomor_hp" => "required",
+            "wilayah" => "required",
+            "bentuk_pendidikan" => "required",
+            "nama_sekolah" => "required",
+            "nama_pengguna" => "required",
+            "kata_sandi" => "required",
+            "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
+        ]);
+
+        DataKepalaSekolah::findOrFail($id)->update($dataKepalaSekolah);
+        return back()->with('message', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -116,6 +142,19 @@ class DataKepalaSekolahController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $s = DataKepalaSekolah::where('id_data_kepala_sekolah', $id)->firstOrFail();
+        $s->delete();
+
+        return back();
+    }
+
+    public function getKepalaSekolahByKecamatan(Request $request)
+    {
+
+        $req = $request->get('kec');
+        $kepalaSekolah = DataKepalaSekolah::where('wilayah', $req)->get();
+        // dd($kepalaSekolah);
+        return view('operator.data-kepala-sekolah-kecamatan', compact('kepalaSekolah'));
     }
 }
