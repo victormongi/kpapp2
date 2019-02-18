@@ -59,6 +59,18 @@ Route::get('operator/laporan', function () {
     return view('operator.laporan');
 });
 
+Route::get('operator/laporan-kecamatan', function () {
+    return view('operator.laporan-kecamatan');
+});
+
+Route::get('operator/laporan-detail', function () {
+    return view('operator.laporan-detail');
+});
+
+Route::get('operator/laporan-detail-anggota', function () {
+    return view('operator.laporan-detail-anggota');
+});
+
 // KEPALA SEKOLAH
 
 Route::get('kepala-sekolah', function () {
@@ -73,8 +85,8 @@ Route::get('kepala-sekolah/laporan', function () {
     return view('kepala-sekolah.laporan');
 });
 
-Route::get('kepala-sekolah/validasi-laporan', function () {
-    return view('kepala-sekolah.validasi-laporan');
+Route::get('kepala-sekolah/laporan-validasi', function () {
+    return view('kepala-sekolah.laporan-validasi');
 });
 
 // PTK NON PNS

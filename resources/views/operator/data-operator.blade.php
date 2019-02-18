@@ -53,17 +53,18 @@
 
 <br><br>
 
-<table class="table is-fullwidth">
-    <thead>
-        <tr>
-            <th><abbr title="Position">No.</abbr></th>
-            <th><abbr title="Position">Nama Operator</abbr></th>
-            <th><abbr title="Position">Nama Pengguna</abbr></th>
-            <th><abbr title="Position">Opsi</abbr></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($dataOperator as $operator)
+<div class="box">
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th><abbr title="Position">No.</abbr></th>
+                <th><abbr title="Position">Nama Operator</abbr></th>
+                <th><abbr title="Position">Nama Pengguna</abbr></th>
+                <th><abbr title="Position">Opsi</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($dataOperator as $operator)
             <tr>
                 <td></td>
                 <td>{{$operator->nama_operator}}</td>
@@ -73,9 +74,10 @@
 
                 </td>
             </tr>
-        @endforeach
-    </tbody>
-</table>
+            @endforeach
+        </tbody>
+    </table>
+</div>
 
 
 @endsection

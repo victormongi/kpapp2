@@ -9,7 +9,7 @@
 @section('content')
 <h1 class="title is-1">Data Sekolah</h1>
 
-<div>
+<div class="box">
     <table id="data-table" class="table is-fullwidth">
         <thead>
             <tr>
@@ -17,7 +17,6 @@
                 <th><abbr title="Position">Nama Sekolah</abbr></th>
                 <th><abbr title="Position">Wilayah</abbr></th>
                 <th><abbr title="Position">NPSN</abbr></th>
-                <th><abbr title="Position">Bentuk Pendidikan</abbr></th>
                 <th><abbr title="Position">Status</abbr></th>
                 <th><abbr title="Position">Opsi</abbr></th>
             </tr>
@@ -30,7 +29,6 @@
                         $sekolah->nama_sekolah }}</a></td>
                 <td>{{$sekolah->wilayah}}</td>
                 <td>{{$sekolah->npsn}}</td>
-                <td>{{$sekolah->bentuk_pendidikan}}</td>
                 <td>{{$sekolah->bentuk_sekolah}}</td>
                 <td>
                 <a class="button is-info" href="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}/edit">Edit</a>

@@ -211,7 +211,7 @@
 
 <br><br>
 
-<div>
+<div class="box">
     <table class="table is-fullwidth">
         <thead>
             <tr>

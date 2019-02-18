@@ -9,7 +9,7 @@
 @section('content')
 <h1 class="title is-1">Laporan</h1>
 
-<div>
+<div class="box">
     <table class="table is-fullwidth">
         <thead>
             <tr>
@@ -25,7 +25,7 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Kec. Tomohon Utara</td>
+                <td><a href="/operator/laporan-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Kec. Tomohon Selatan</td>
+                <td><a href="/operator/laporan-kecamatan?kec=Tomohon%20Selatan">Kec. Tomohon Selatan</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -41,15 +41,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>Kec. Tomohon Tengah</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Kec. Tomohon Barat</td>
+                <td><a href="/operator/laporan-kecamatan?kec=Tomohon%20Tengah">Kec. Tomohon Tengah</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -57,7 +49,15 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>Kec. Tomohon Selatan</td>
+                <td><a href="/operator/laporan-kecamatan?kec=Tomohon%20Barat">Kec. Tomohon Barat</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="/operator/laporan-kecamatan?kec=Tomohon%20Timur">Kec. Tomohon Timur</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -75,55 +75,6 @@
     </table>
 </div>
 
-<br>
-<div class="box">
-    <p> <strong>Tanggal Kegiatan: </strong></p>
-    <p class="title">20 Februari 2019</p>
-
-    <table>
-        <tr>
-            <td>Nama Anggota</td>
-            <td> :</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Nama Sekolah</td>
-            <td> :</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jumlah Rombel</td>
-            <td> :</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jumlah Siswa</td>
-            <td> :</td>
-            <td></td>
-        </tr>
-    </table><br>
-
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <th><abbr title="Position">Jam Mulai</abbr></th>
-                <th><abbr title="Position">Jam Selesai</abbr></th>
-                <th><abbr title="Position">Uraian Kegiatan</abbr></th>
-                <th><abbr title="Position">Keterangan</abbr></th>
-            </tr>
-        </thead>
-        <tbody>
-            {{-- @foreach ($dataOperator as $operator) --}}
-            <tr>
-                <td>asfs</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            {{-- @endforeach --}}
-        </tbody>
-    </table>
-</div>
 
 
 @endsection

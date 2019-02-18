@@ -129,8 +129,8 @@
 
 <br><br>
 
-<div>
-    <table class="table">
+<div class="box">
+    <table class="table is-fullwidth">
         <thead>
             <tr>
                 <th><abbr title="Position">No.</abbr></th>
