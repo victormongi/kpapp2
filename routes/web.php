@@ -73,6 +73,10 @@ Route::get('kepala-sekolah/laporan', function () {
     return view('kepala-sekolah.laporan');
 });
 
+Route::get('kepala-sekolah/validasi-laporan', function () {
+    return view('kepala-sekolah.validasi-laporan');
+});
+
 // PTK NON PNS
 
 Route::get('ptk-non-pns', function () {

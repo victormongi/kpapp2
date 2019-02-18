@@ -135,6 +135,7 @@
             <tr>
                 <th><abbr title="Position">No.</abbr></th>
                 <th><abbr title="Position">Wilayah</abbr></th>
+                <th><abbr title="Position">Jumlah</abbr></th>
 
             </tr>
         </thead>
@@ -142,22 +143,32 @@
             <tr>
                 <td>1</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Utara</a></td>
+                <td></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Selatan</a></td>
+                <td></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Tengah</a></td>
+                <td></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Barat</a></td>
+                <td></td>
             </tr>
             <tr>
                 <td>4</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Timur</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th><abbr title="Position">Total</abbr></th>
+                <td></td>
             </tr>
         </tbody>
     </table>

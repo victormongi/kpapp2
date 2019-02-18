@@ -89,11 +89,9 @@
     <div class="tile is-parent">
         <article class="tile is-child">
             <p class="subtitle">Jumat,</p>
-            <p class="title">20 Februari</p>
+            <p class="title">20 Februari 2019</p>
             <div class="content">
-                <p>Mo tampilkan Tanggal Hari Ini. <br>
-                    Yang Uptodate.
-                </p>
+
             </div>
 
             <button class="button is-primary is-large" @click="toggleShow">Tambah Laporan</button><br>
