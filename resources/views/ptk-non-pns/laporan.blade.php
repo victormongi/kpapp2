@@ -117,6 +117,16 @@
                         <td>Disetujui</td>
                         <td>Hapus, Ubah</td>
                     </tr>
+                    <tr>
+                        <td>21 Februari 2019</td>
+                        <td>Disetujui</td>
+                        <td>Hapus, Ubah</td>
+                    </tr>
+                    <tr>
+                        <td>22 Februari 2019</td>
+                        <td>Disetujui</td>
+                        <td>Hapus, Ubah</td>
+                    </tr>
                     {{-- @endforeach --}}
                 </tbody>
             </table>
