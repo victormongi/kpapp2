@@ -69,9 +69,7 @@ Route::get('kepala-sekolah/data-diri', function () {
     return view('kepala-sekolah.data-diri');
 });
 
-Route::get('kepala-sekolah/laporan', function () {
-    return view('kepala-sekolah.laporan');
-});
+Route::get('kepala-sekolah/laporan', 'KepalaSekolahController@lihatSemuaPtk');
 
 Route::get('kepala-sekolah/laporan-validasi', function () {
     return view('kepala-sekolah.laporan-validasi');
