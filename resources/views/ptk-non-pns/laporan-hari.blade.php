@@ -84,81 +84,36 @@
 </div>
 {{-- END FORM INPUT LAPORAN KEGIATAN --}}
 
-<br>
-<div class="tile is-ancestor">
-    <div class="tile is-parent">
-        <article class="tile is-child">
-            <p class="subtitle">Jumat,</p>
-            <p class="title">20 Februari 2019</p>
-            <div class="content">
-
-            </div>
-
-            <button class="button is-primary is-large" @click="toggleShow">Tambah Laporan</button><br>
-        </article>
+<div>
+    <p> <strong>Tanggal Kegiatan: </strong></p>
+    <p class="title">20 Februari 2019</p>
+    <p> <strong>Status Laporan: </strong></p><br>
+    <p>Jumlah Rombongan Belajar:</p>
+    <p>Jumlah Siswa:</p><br>
+    <div class="box">
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th><abbr title="Position">Jam Mulai</abbr></th>
+                    <th><abbr title="Position">Jam Selesai</abbr></th>
+                    <th><abbr title="Position">Uraian Kegiatan</abbr></th>
+                    <th><abbr title="Position">Keterangan</abbr></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{-- @foreach ($dataOperator as $operator) --}}
+                <tr>
+                    <td>asfs</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {{-- @endforeach --}}
+            </tbody>
+        </table>
     </div>
-
-    <div class="tile is-parent is-8">
-        <article class="tile is-child box">
-            <table class="table is-fullwidth">
-                <thead>
-                    <tr>
-                        <th><abbr title="Position">Tanggal Kegiatan</abbr></th>
-                        <th><abbr title="Position">Status</abbr></th>
-                        <th><abbr title="Position">Opsi</abbr></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{-- @foreach ($dataOperator as $operator) --}}
-                    <tr>
-                        <td>20 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
-                    </tr>
-                    <tr>
-                        <td>21 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
-                    </tr>
-                    <tr>
-                        <td>22 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
-                    </tr>
-                    {{-- @endforeach --}}
-                </tbody>
-            </table>
-        </article>
-    </div>
+    <button class="button is-primary is-small" @click="toggleShow">Tambah Laporan</button>
 </div>
-
-<div class="box">
-    <p>Buat Select untuk Pilih Tahun Ajaran:</p>
-    <p>Buat Select untuk Pilih Semester:</p>
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <th><abbr title="Position">Bulan</abbr></th>
-                <th><abbr title="Position">Selesai</abbr></th>
-                <th><abbr title="Position">Belum <br> Selesai</abbr></th>
-                <th><abbr title="Position">Disetujui</abbr></th>
-                <th><abbr title="Position">Belum <br> Disetujui</abbr></th>
-            </tr>
-        </thead>
-        <tbody>
-            {{-- @foreach ($dataOperator as $operator) --}}
-            <tr>
-                <td>Januari</td>
-                <td>... Hari</td>
-                <td>... Hari</td>
-                <td>... Hari</td>
-                <td>... Hari</td>
-            </tr>
-            {{-- @endforeach --}}
-        </tbody>
-    </table>
-</div>
-
 
 
 

@@ -90,3 +90,7 @@ Route::get('ptk-non-pns/data-diri', function () {
 Route::get('ptk-non-pns/laporan', function () {
     return view('ptk-non-pns.laporan');
 });
+
+Route::get('ptk-non-pns/laporan-hari', function () {
+    return view('ptk-non-pns.laporan-hari');
+});
