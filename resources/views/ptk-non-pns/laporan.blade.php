@@ -20,7 +20,7 @@
 
             </div>
 
-            <a href="http:/ptk-non-pns/laporan-hari">
+            <a href="/ptk-non-pns/laporan-harian">
                 <button class="button is-primary is-large">Tambah Laporan</button><br>
             </a>
         </article>
@@ -28,6 +28,35 @@
 
     <div class="tile is-parent is-8">
         <article class="tile is-child box">
+            <form action="/ptk-non-pns/laporan" method="get">
+
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                            <select name="tahun">
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                            <select name="bulan">
+                                <option value="1">Januari</option>
+                                <option value="2">Februari</option>
+                                <option value="3">Maret</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-primary">Sort</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+
             <table class="table is-fullwidth">
                 <thead>
                     <tr>
@@ -37,17 +66,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>20 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>
-                            <div class="buttons">
-                                <a class="button is-info is-small" href="//edit">Ubah</span>
-                                </a>
-                                    <input type="submit" class="button is-danger is-small" value="Hapus" />
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach ($laporanHarian as $laporan)
+
+                        <tr>
+                            <td>{{$laporan->tanggal_kegiatan}}</td>
+                            <td>Disetujui</td>
+                            <td>
+                                <div class="buttons">
+                                <a class="button is-info is-small" href="/ptk-non-pns/laporan-harian-per-tanggal?tgl={{$laporan->tanggal_kegiatan}}">Ubah</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    @endforeach
                 </tbody>
             </table>
         </article>
