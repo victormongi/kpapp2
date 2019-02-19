@@ -33,7 +33,7 @@
                 <td>{{$s->nomor_hp}}</td>
                 <td>
                     <div class="buttons">
-                        <a class="button is-info is-small" href="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}/edit">Edit</a>
+                        <a class="button is-info is-small" href="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}/edit">Ubah</a>
 
                         <form action="/operator/data-kepala-sekolah/{{$s->id_data_kepala_sekolah}}" method="post">
                             {{method_field('DELETE')}}

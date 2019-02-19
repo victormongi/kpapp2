@@ -30,7 +30,7 @@
 
 
                     <div class="buttons">
-                        <a class="button is-info is-small" href="/operator/data-anggota/{{$anggota->id_data_anggotas}}/edit">Edit</a>
+                        <a class="button is-info is-small" href="/operator/data-anggota/{{$anggota->id_data_anggotas}}/edit">Ubah</a>
                         <form action="/operator/data-anggota/{{$anggota->id_data_anggotas}}" method="post">
                             @method('DELETE')
                             @csrf

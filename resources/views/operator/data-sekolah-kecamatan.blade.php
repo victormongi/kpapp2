@@ -32,7 +32,7 @@
                 <td>{{$sekolah->bentuk_sekolah}}</td>
                 <td>
                     <div class="buttons">
-                        <a class="button is-success is-small" href="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}/edit">Edit</span>
+                        <a class="button is-info is-small" href="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}/edit">Ubah</span>
                         </a>
     
                         <form action="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}" method="post">
