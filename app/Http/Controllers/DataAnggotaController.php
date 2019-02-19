@@ -69,6 +69,16 @@ class DataAnggotaController extends Controller
     public function store(Request $request)
     {
         // dd($request->post());
+        // dd($request->post());
+        $image = $request->file('foto_url');
+        if ($image){
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images');
+
+            $image->move($destinationPath, $filename);
+        }
+        
         $data_anggota = $request->validate([
             "nama_anggota" => "required",
             "tempat_lahir" => "required",
@@ -87,18 +97,9 @@ class DataAnggotaController extends Controller
             "nama_sekolah" => "required",
             "nama_pengguna" => "required",
             "kata_sandi" => "required",
-            "foto_url" => "required|image|mimes:jpeg,png,jpg,gif,svg|max:2048",
+            "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
         ]);
 
-        $image = $request->file('foto_url');
-
-        $filename = time().'.'.$image->getClientOriginalExtension();
-        
-        $destinationPath = public_path('/images');
-
-        $image->move($destinationPath, $filename);
-
-        
         DataAnggota::create(
             [
             "nama_anggota" =>$request->post("nama_anggota"),
@@ -118,11 +119,11 @@ class DataAnggotaController extends Controller
             "nama_sekolah" =>$request->post("nama_sekolah"),
             "nama_pengguna" =>$request->post("nama_pengguna"),
             "kata_sandi" =>$request->post("kata_sandi"),
-            "foto_url" =>$filename
+            "foto_url" =>$filename ?? '',
             ]
         );
         // dd($data_anggota);
-        return back()->with('sukses berhasil dinput');
+        return back()->with('sukses berhasil dimasukkan');
     }
 
     /**
@@ -144,7 +145,11 @@ class DataAnggotaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataSekolah = DataSekolah::all();
+
+        $s = DataAnggota::where('id_data_anggotas', $id)->firstOrFail();
+        // dd($dataAnggota);
+        return view('operator.data-anggota-edit', compact('s', 'dataSekolah'));
     }
 
     /**
@@ -156,7 +161,40 @@ class DataAnggotaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->post());
+        $image = $request->file('foto_url');
+
+        if ($image) {
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images');
+
+            $image->move($destinationPath, $filename);
+        }
+
+        $data = $request->validate([
+            "nama_anggota" => "required",
+            "tempat_lahir" => "required",
+            "jenis_kelamin" => "required",
+            "tanggal_lahir" => "required",
+            "alamat" => "required",
+            "nomor_hp" => "required",
+            "pendidikan_terakhir" => "required",
+            "lembaga_pendidikan" => "required",
+            "ijazah" => "required",
+            "tmt_bekerja" => "required",
+            "mata_pelajaran" => "required",
+            "jumlah_jam_pelajaran" => "required",
+            "wilayah" => "required",
+            "bentuk_pendidikan" => "required",
+            "nama_sekolah" => "required",
+            "nama_pengguna" => "required",
+            "kata_sandi" => "required",
+            "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
+        ]);
+
+        DataAnggota::findOrFail($id)->update($data);
+        return back()->with('message', 'Data Berhasil Diubah');
     }
 
     /**
@@ -167,13 +205,18 @@ class DataAnggotaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // dd('destroy');
+        $dataAnggota = DataAnggota::where('id_data_anggotas', $id)->firstOrFail();
+        $dataAnggota->delete();
+
+        return back();
     }
 
-    public function getDetailSekolahByNamaSekolah(Request $request)
+    public function getDataAnggotaByKecamatan(Request $request)
     {
-        $req = $request->get('nama-anggota');
-        $a = DataAnggota::where('nama_anggota', $req)->first();
-        return view('operator.data-anggota-detail', compact('a'));
+        $req = $request->get('kec');
+        $dataAnggota = DataAnggota::where('wilayah', $req)->get();
+        // dd($dataAnggota);
+        return view('operator.data-anggota-kecamatan', compact('dataAnggota'));
     }
 }

@@ -80,7 +80,7 @@ class DataSekolahController extends Controller
             "tanggal_sk_izin_operasional" => "required",
         ]);
         DataSekolah::create($data_sekolah);
-        return back()->with('sukses berhasil dinput');
+        return back()->with('sukses berhasil dimasukkan');
     }
 
     /**
@@ -132,7 +132,7 @@ class DataSekolahController extends Controller
             "tanggal_sk_izin_operasional" => "required",
         ]);
         DataSekolah::findOrFail($id)->update($data);
-        return back()->with('message', 'Data Berhasil Diupdate');
+        return back()->with('message', 'Data Berhasil Diuubah');
     }
 
     /**

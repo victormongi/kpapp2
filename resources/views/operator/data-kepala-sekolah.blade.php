@@ -10,8 +10,8 @@
 <h1 class="title is-1">Data Kepala Sekolah</h1>
 
 <button class="button is-primary is-large" @click="toggleShow">Tambah Data Kepala Sekolah</button>
-    <div class="column is-5" v-show="formShow">
-        <form action="/operator/data-kepala-sekolah" method="post" enctype="multipart/form-data">
+<div class="column is-5" v-show="formShow">
+    <form action="/operator/data-kepala-sekolah" method="post" enctype="multipart/form-data">
 
         @csrf
 
@@ -63,11 +63,13 @@
         </div>
 
         <div class="field">
-            <label class="label" for="nama_sekolah">Nama Sekolah</label>
+            <label class="label" for="nama_sekolah">Unit Kerja</label>
             <div class="select">
                 <select id="nama_sekolah" name="nama_sekolah" value="{{ old('nama_sekolah') }}">
-                    <option>Pilih Bentuk Pendidikan</option>
-                    <option value="tk-paud">TK/PAUD</option>
+                    <option>Pilih Unit Kerja</option>
+                    @foreach ($dataSekolah as $sekolah)
+                    <option value="{{ $sekolah->nama_sekolah }}">{{ $sekolah->nama_sekolah }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -145,32 +147,32 @@
             <tr>
                 <td>1</td>
                 <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
-                <td></td>
+                <td>{{ $dataSekolah2->jumlahKepalaSekolahTomohonUtara }}</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Selatan</a></td>
-                <td></td>
+                <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Selatan">Kec. Tomohon Selatan</a></td>
+                <td>{{ $dataSekolah2->jumlahKepalaSekolahTomohonSelatan }}</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Tengah</a></td>
-                <td></td>
+                <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Tengah">Kec. Tomohon Tengah</a></td>
+                <td>{{ $dataSekolah2->jumlahKepalaSekolahTomohonTengah }}</td>
             </tr>
             <tr>
                 <td>5</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Barat</a></td>
-                <td></td>
+                <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Barat">Kec. Tomohon Barat</a></td>
+                <td>{{ $dataSekolah2->jumlahKepalaSekolahTomohonBarat }}</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td><a href="/operator/data-kepala-sekolah-kecamatan">Kec. Tomohon Timur</a></td>
-                <td></td>
+                <td><a href="/operator/data-kepala-sekolah-kecamatan?kec=Tomohon%20Timur">Kec. Tomohon Timur</a></td>
+                <td>{{ $dataSekolah2->jumlahKepalaSekolahTomohonTimur }}</td>
             </tr>
             <tr>
                 <td></td>
                 <th><abbr title="Position">Total</abbr></th>
-                <td></td>
+                <td>{{ $dataSekolah2->totalKepalaSekolah }}</td>
             </tr>
         </tbody>
     </table>

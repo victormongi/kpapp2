@@ -31,12 +31,16 @@
                 <td>{{$sekolah->npsn}}</td>
                 <td>{{$sekolah->bentuk_sekolah}}</td>
                 <td>
-                <a class="button is-info" href="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}/edit">Edit</a>
-                    <form action="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}" method="post">
-                        {{method_field('DELETE')}}
-                        @csrf
-                        <input type="submit" class="button is-danger" value="Hapus" />
-                    </form>
+                    <div class="buttons">
+                        <a class="button is-success is-small" href="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}/edit">Edit</span>
+                        </a>
+    
+                        <form action="/operator/data-sekolah/{{$sekolah->id_data_sekolah}}" method="post">
+                            {{method_field('DELETE')}}
+                            @csrf
+                            <input type="submit" class="button is-danger is-small" value="Hapus" />
+                        </form>
+                    </div>
                 </td>
             </tr>
             @endforeach
@@ -44,5 +48,8 @@
     </table>
 </div>
 
+<div class="box">
+
+</div>
 
 @endsection

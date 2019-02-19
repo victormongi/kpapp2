@@ -33,23 +33,13 @@ Route::resource('operator/data-kepala-sekolah', 'DataKepalaSekolahController');
 
 Route::get('operator/data-kepala-sekolah-kecamatan', 'DataKepalaSekolahController@getKepalaSekolahByKecamatan');
 
-Route::get('operator/data-kepala-sekolah-detail', function () {
-    return view('operator.data-kepala-sekolah-detail');
-});
+Route::get('operator/data-kepala-sekolah-detail', 'DataKepalaSekolahController@getDetailKepalaSekolahByNamaKepalaSekolah');
 
 Route::resource('operator/data-anggota', 'DataAnggotaController');
 
 Route::get('operator/data-anggota-kecamatan', 'DataAnggotaController@getDataAnggotaByKecamatan');
 
 Route::get('operator/data-anggota-detail', 'DataAnggotaController@getDetailAnggotaByNamaAnggota');
-
-Route::get('operator/data-anggota-kecamatan', function () {
-    return view('operator.data-anggota-kecamatan');
-});
-
-Route::get('operator/data-anggota-detail', function () {
-    return view('operator.data-anggota-detail');
-});
 
 Route::resource('operator/data-operator', 'DataOperatorController');
 

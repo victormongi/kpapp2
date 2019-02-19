@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataKepalaSekolah;
 use Illuminate\Http\Request;
+use App\DataSekolah;
 
 class DataKepalaSekolahController extends Controller
 {
@@ -14,7 +15,20 @@ class DataKepalaSekolahController extends Controller
      */
     public function index()
     {
-        return view('operator.data-kepala-sekolah');
+        $dataSekolah = DataSekolah::all();
+
+        $s = collect([
+            "jumlahKepalaSekolahTomohonUtara" => DataKepalaSekolah::where('wilayah', 'Tomohon Utara')->count(),
+            "jumlahKepalaSekolahTomohonSelatan" => DataKepalaSekolah::where('wilayah', 'Tomohon Selatan')->count(),
+            "jumlahKepalaSekolahTomohonTengah" => DataKepalaSekolah::where('wilayah', 'Tomohon Tengah')->count(),
+            "jumlahKepalaSekolahTomohonBarat" => DataKepalaSekolah::where('wilayah', 'Tomohon Barat')->count(),
+            "jumlahKepalaSekolahTomohonTimur" => DataKepalaSekolah::where('wilayah', 'Tomohon Timur')->count(),
+            "totalKepalaSekolah" => DataKepalaSekolah::all()->count(),
+        ]);
+
+        $dataSekolah2 = json_decode($s->toJson());
+
+        return view('operator.data-kepala-sekolah', compact('dataSekolah', 'dataSekolah2'));
     }
 
     /**
@@ -36,6 +50,16 @@ class DataKepalaSekolahController extends Controller
     public function store(Request $request)
     {
         // dd($request->post());
+        $image = $request->file('foto_url');
+        if ($image){
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images');
+
+            $image->move($destinationPath, $filename);
+        }
+        
+
         $data_kepala_sekolah = $request->validate([
             "nama_kepala_sekolah" => "required",
             "alamat" => "required",
@@ -45,16 +69,10 @@ class DataKepalaSekolahController extends Controller
             "nama_sekolah" => "required",
             "nama_pengguna" => "required",
             "kata_sandi" => "required",
-            "foto_url" => "required|image|mimes:jpeg,png,jpg,gif,svg|max:2048",
+            "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
         ]);
 
-        $image = $request->file('foto_url');
 
-        $filename = time() . '.' . $image->getClientOriginalExtension();
-
-        $destinationPath = public_path('/images');
-
-        $image->move($destinationPath, $filename);
 
         DataKepalaSekolah::create(
             [
@@ -66,7 +84,7 @@ class DataKepalaSekolahController extends Controller
                 "nama_sekolah" => $request->post("nama_sekolah"),
                 "nama_pengguna" => $request->post("nama_pengguna"),
                 "kata_sandi" => $request->post("kata_sandi"),
-                "foto_url" => $filename,
+                "foto_url" => $filename ?? '',
             ]
         );
         // dd($filename);
@@ -156,5 +174,13 @@ class DataKepalaSekolahController extends Controller
         $kepalaSekolah = DataKepalaSekolah::where('wilayah', $req)->get();
         // dd($kepalaSekolah);
         return view('operator.data-kepala-sekolah-kecamatan', compact('kepalaSekolah'));
+    }
+
+    public function getDetailKepalaSekolahByNamaKepalaSekolah(Request $request)
+    {
+        $req = $request->get('nama-kepala-sekolah');
+        $s = DataKepalaSekolah::where('nama_kepala_sekolah', $req)->first();
+        // dd($s);
+        return view('operator.data-kepala-sekolah-detail', compact('s'));
     }
 }
