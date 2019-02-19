@@ -20,6 +20,7 @@ class CreateLaporansTable extends Migration
             $table->integer('jumlah_rombel');
             $table->date('tanggal_kegiatan');
             $table->integer('jumlah_siswa');
+            $table->tinyInteger('disetujui')->default(0);
             $table->time('jam_mulai');
             $table->time('jam_selesai');
             $table->text('uraian_kegiatan');
