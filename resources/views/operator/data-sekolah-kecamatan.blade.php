@@ -22,9 +22,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($dataSekolah as $sekolah)
+            @foreach ($dataSekolah as $key=> $sekolah)
             <tr>
-                <td>{{ $sekolah->id }}</td>
+                <td>{{ ++$key }}</td>
                 <td> <a href="/operator/data-sekolah-detail?nama-sekolah={{$sekolah->nama_sekolah}}">{{
                         $sekolah->nama_sekolah }}</a></td>
                 <td>{{$sekolah->wilayah}}</td>

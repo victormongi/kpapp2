@@ -64,12 +64,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($dataOperator as $operator)
+            @foreach ($dataOperator as $key=> $operator)
             <tr>
-                <td></td>
+                <td>{{++$key}}</td>
                 <td>{{$operator->nama_operator}}</td>
                 <td>{{$operator->nama_pengguna}}</td>
                 <td>
+                    <div class="buttons">
+                        <a class="button is-info is-small" href="/operator/data-operator/edit">Ubah</a>
+
+                        <form action="/operator/data-operator/" method="post">
+                            <input type="submit" class="button is-danger is-small" value="Hapus" />
+                        </form>
+                    </div>
 
 
                 </td>
