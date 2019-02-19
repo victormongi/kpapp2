@@ -9,29 +9,28 @@
 @section('content')
 <h1 class="title is-1">Data Operator</h1>
 
-<button class="button is-primary is-large" @click="toggleShow">Tambah Data Anggota</button>
-
-<div class="column is-5" v-show="formShow">
-    <form action="/operator/data-operator" method="post">
+<div class="column is-5">
+    <form action="/operator/data-operator/{{$s->id_data_operators}}" method="post">
         @csrf
+        @method('PATCH')    
         <div class="field">
             <label class="label" for="nama_operator">Nama Operator</label>
             <div class="control">
-                <input class="input" type="text" id="nama_operator" name="nama_operator" value="{{ old('nama_operator') }}">
+                <input class="input" type="text" id="nama_operator" name="nama_operator" value="{{$s->nama_operator}}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="nama_pengguna">Nama Penguna</label>
             <div class="control">
-                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{ old('nama_pengguna') }}">
+                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{$s->nama_pengguna}}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="kata_sandi">Kata Sandi</label>
             <div class="control">
-                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
+                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{$s->kata_sandi}}">
             </div>
         </div>
 
@@ -73,7 +72,7 @@
                     <div class="buttons">
                         <a class="button is-info is-small" href="/operator/data-operator/{{$operator->id_data_operators}}/edit">Ubah</span>
                         </a>
-    
+
                         <form action="/operator/data-operator/{{$operator->id_data_operators}}" method="post">
                             {{method_field('DELETE')}}
                             @csrf

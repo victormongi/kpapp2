@@ -14,7 +14,7 @@ class CreateDataOperatorsTable extends Migration
     public function up()
     {
         Schema::create('data_operators', function (Blueprint $table) {
-            $table->increments('id_data_sekolah');
+            $table->increments('id_data_operators');
             $table->string('nama_operator');
             $table->string('nama_pengguna');
             $table->string('kata_sandi');

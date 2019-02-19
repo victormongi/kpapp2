@@ -110,9 +110,11 @@ class DataKepalaSekolahController extends Controller
      */
     public function edit($id)
     {
+        $dataSekolah=DataSekolah::all();
+
         $s = DataKepalaSekolah::where('id_data_kepala_sekolah', $id)->firstOrFail();
         // dd($s);
-        return view('operator.data-kepala-sekolah-edit', compact('s'));
+        return view('operator.data-kepala-sekolah-edit', compact('s', 'dataSekolah'));
         //
     }
 
@@ -149,7 +151,7 @@ class DataKepalaSekolahController extends Controller
         ]);
 
         DataKepalaSekolah::findOrFail($id)->update($dataKepalaSekolah);
-        return back()->with('message', 'Data Berhasil Diupdate');
+        return back()->with('message', 'Data berhasil diubah!');
     }
 
     /**

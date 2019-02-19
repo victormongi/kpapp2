@@ -61,11 +61,13 @@
         </div>
 
         <div class="field">
-            <label class="label" for="nama_sekolah">Nama Sekolah</label>
+            <label class="label" for="nama_sekolah">Unit Kerja</label>
             <div class="select">
                 <select id="nama_sekolah" name="nama_sekolah" value="{{ old('nama_sekolah') }}">
-                    <option>Pilih Bentuk Pendidikan</option>
-                    <option value="tk-paud">TK/PAUD</option>
+                    <option>Pilih Unit Kerja</option>
+                    @foreach ($dataSekolah as $sekolah)
+                    <option value="{{ $sekolah->nama_sekolah }}">{{ $sekolah->nama_sekolah }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -75,14 +77,14 @@
         <div class="field">
             <label class="label" for="nama_pengguna">Nama Penguna/ <br> <i>Username</i> </label>
             <div class="control">
-                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{ old('nama_pengguna') }}">
+                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{$s->nama_pengguna}}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="kata_sandi">Kata Sandi/ <br> <i>Password</i> </label>
             <div class="control">
-                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
+                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{$s->kata_sandi}}">
             </div>
         </div>
 
