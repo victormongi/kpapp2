@@ -79,14 +79,10 @@ Route::get('kepala-sekolah/laporan-validasi', function () {
 
 // PTK NON PNS
 
-Route::get('ptk-non-pns', function () {
-    return view('ptk-non-pns.index');
-});
+Route::get('ptk-non-pns', 'PtkNonPnsController@index');
+Route::get('ptk-non-pns/data-diri', 'PtkNonPnsController@dataDiri');
+Route::get('ptk-non-pns/laporan', 'PtkNonPnsController@laporan');
 
-Route::get('ptk-non-pns/data-diri', function () {
-    return view('ptk-non-pns.data-diri');
-});
+Auth::routes();
 
-Route::get('ptk-non-pns/laporan', function () {
-    return view('ptk-non-pns.laporan');
-});
+Route::get('/home', 'HomeController@index')->name('home');
