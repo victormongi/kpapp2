@@ -50,43 +50,6 @@
     </form>
 </div>
 
-<br><br>
-
-<div class="box">
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <th><abbr title="Position">No.</abbr></th>
-                <th><abbr title="Position">Nama Operator</abbr></th>
-                <th><abbr title="Position">Nama Pengguna</abbr></th>
-                <th><abbr title="Position">Opsi</abbr></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($dataOperator as $key=> $operator)
-            <tr>
-                <td>{{++$key}}</td>
-                <td>{{$operator->nama_operator}}</td>
-                <td>{{$operator->nama_pengguna}}</td>
-                <td>
-                    <div class="buttons">
-                        <a class="button is-info is-small" href="/operator/data-operator/{{$operator->id_data_operators}}/edit">Ubah</span>
-                        </a>
-
-                        <form action="/operator/data-operator/{{$operator->id_data_operators}}" method="post">
-                            {{method_field('DELETE')}}
-                            @csrf
-                            <input type="submit" class="button is-danger is-small" value="Hapus" />
-                        </form>
-                    </div>
-
-
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
 
 
 @endsection

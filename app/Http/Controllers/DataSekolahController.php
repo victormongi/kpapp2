@@ -132,7 +132,7 @@ class DataSekolahController extends Controller
             "tanggal_sk_izin_operasional" => "required",
         ]);
         DataSekolah::findOrFail($id)->update($data);
-        return back()->with('message', 'Data berhasil diubah!');
+        return redirect('/operator/data-sekolah')->with('message', 'Data berhasil diubah!');
     }
 
     /**

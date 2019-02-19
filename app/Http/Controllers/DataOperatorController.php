@@ -75,7 +75,7 @@ class DataOperatorController extends Controller
     public function edit($id)
     {
         $s = DataOperator::where('id_data_operators', $id)->firstOrFail();
-        // dd($dataSekolah);
+        // dd($s);
         return view('operator.data-operator-edit', compact('s'));
     }
 
@@ -94,7 +94,7 @@ class DataOperatorController extends Controller
             "kata_sandi" => "required",
         ]);
         DataOperator::findOrFail($id)->update($data);
-        return back()->with('message', 'Data berhasil diubah!');
+        return redirect('/operator/data-operator')->with('message', 'Data berhasil diubah!');
     }
 
     /**

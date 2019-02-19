@@ -151,7 +151,7 @@ class DataKepalaSekolahController extends Controller
         ]);
 
         DataKepalaSekolah::findOrFail($id)->update($dataKepalaSekolah);
-        return back()->with('message', 'Data berhasil diubah!');
+        return redirect('/operator/data-kepala-sekolah')->with('message', 'Data berhasil diubah!');
     }
 
     /**

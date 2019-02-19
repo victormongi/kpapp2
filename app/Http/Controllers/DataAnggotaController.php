@@ -194,7 +194,7 @@ class DataAnggotaController extends Controller
         ]);
 
         DataAnggota::findOrFail($id)->update($data);
-        return back()->with('message', 'Data Berhasil Diubah');
+        return redirect('/operator/data-anggota')->with('message', 'Data Berhasil Diubah');
     }
 
     /**
