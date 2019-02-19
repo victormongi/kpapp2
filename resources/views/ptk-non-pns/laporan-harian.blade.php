@@ -12,7 +12,7 @@
 {{-- FORM INPUT LAPORAN KEGIATAN --}}
 
 <div class="column is-5" v-show="formShow">
-    <form action="/ptk-non-pns/laporan" method="POST">
+    <form action="/ptk-non-pns/buat-laporan-harian" method="POST">
         @csrf
 
         <div class="field">
@@ -39,14 +39,14 @@
         <div class="field">
             <label class="label" for="jam_mulai">Jam Mulai</label>
             <div class="control">
-                <input class="input" type="text" id="jam_mulai" name="jam_mulai" value="{{ old('jam_mulai') }}">
+                <input class="input" type="time" id="jam_mulai" name="jam_mulai" value="{{ old('jam_mulai') }}">
             </div>
         </div>
 
         <div class="field">
             <label class="label" for="jam_selesai">Jam Selesai</label>
             <div class="control">
-                <input class="input" type="text" id="jam_selesai" name="jam_selesai" value="{{ old('jam_selesai') }}">
+                <input class="input" type="time" id="jam_selesai" name="jam_selesai" value="{{ old('jam_selesai') }}">
             </div>
         </div>
 
@@ -102,17 +102,21 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($laporanHarian as $laporan)
+
                 <tr>
-                    <td>asfs</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$laporan->jam_mulai}}</td>
+                    <td>{{$laporan->jam_selesai}}</td>
+                    <td>{{$laporan->uraian_kegiatan}}</td>
+                    <td>{{$laporan->keterangan}}</td>
                     <td>
                         <div class="buttons">
                             <input type="submit" class="button is-danger is-small" value="Hapus" />
                         </div>
                     </td>
                 </tr>
+
+                @endforeach
             </tbody>
         </table>
     </div>

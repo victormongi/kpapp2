@@ -82,6 +82,9 @@ Route::get('kepala-sekolah/laporan-validasi', function () {
 Route::get('ptk-non-pns', 'PtkNonPnsController@index');
 Route::get('ptk-non-pns/data-diri', 'PtkNonPnsController@dataDiri');
 Route::get('ptk-non-pns/laporan', 'PtkNonPnsController@laporan');
+Route::get('ptk-non-pns/laporan-harian', 'PtkNonPnsController@laporanHarian');
+Route::post('ptk-non-pns/buat-laporan-harian', 'PtkNonPnsController@buatLaporanHarian');
+Route::get('ptk-non-pns/laporan-harian-per-tanggal', 'PtkNonPnsController@laporanHarianPerTanggal');
 
 Auth::routes();
 
