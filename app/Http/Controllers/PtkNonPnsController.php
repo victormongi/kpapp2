@@ -50,7 +50,7 @@ class PtkNonPnsController extends Controller
         $request->validate([
             "jumlah_rombel" => 'required',
             "jumlah_siswa" => 'required',
-            "tanggal_kegiatan" => 'required|before:' . Carbon::today()->addDays(1),
+            "tanggal_kegiatan" => 'required|before:' . Carbon::today()->addDays(2),
             "jam_mulai" => 'required',
             "jam_selesai" => 'required',
             "uraian_kegiatan" => 'required',
