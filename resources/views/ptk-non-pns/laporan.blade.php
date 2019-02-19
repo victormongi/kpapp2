@@ -37,23 +37,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($dataOperator as $operator) --}}
                     <tr>
                         <td>20 Februari 2019</td>
                         <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
+                        <td>
+                            <div class="buttons">
+                                <a class="button is-info is-small" href="//edit">Ubah</span>
+                                </a>
+                                    <input type="submit" class="button is-danger is-small" value="Hapus" />
+                            </div>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>21 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
-                    </tr>
-                    <tr>
-                        <td>22 Februari 2019</td>
-                        <td>Disetujui</td>
-                        <td>Hapus, Ubah</td>
-                    </tr>
-                    {{-- @endforeach --}}
                 </tbody>
             </table>
         </article>

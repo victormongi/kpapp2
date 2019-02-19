@@ -98,17 +98,21 @@
                     <th><abbr title="Position">Jam Selesai</abbr></th>
                     <th><abbr title="Position">Uraian Kegiatan</abbr></th>
                     <th><abbr title="Position">Keterangan</abbr></th>
+                    <th><abbr title="Position">Opsi</abbr></th>
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($dataOperator as $operator) --}}
                 <tr>
                     <td>asfs</td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>
+                        <div class="buttons">
+                            <input type="submit" class="button is-danger is-small" value="Hapus" />
+                        </div>
+                    </td>
                 </tr>
-                {{-- @endforeach --}}
             </tbody>
         </table>
     </div>
