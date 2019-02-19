@@ -10,7 +10,7 @@
 
             <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
                 <ul>
-                    <li><a href="/login-operator">Operator</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Operator</a></li>
                     <li><a href="#">PTK Non PNS</a></li>
                     <li><a href="#">Kepala Sekolah</a></li>
                 </ul>
