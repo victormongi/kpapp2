@@ -87,5 +87,3 @@ Route::get('ptk-non-pns/laporan-harian-per-tanggal', 'PtkNonPnsController@lapora
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/masuk', 'MasukController@index')->name('home');
