@@ -86,7 +86,7 @@
 
 <div>
     <p> <strong>Tanggal Kegiatan: </strong></p>
-<p class="title">{{ \Carbon\Carbon::parse(request()->get('tgl'))->format('d, M Y') }}</p>
+    <p class="title">{{ \Carbon\Carbon::parse(request()->get('tgl'))->format('d, M Y') }}</p>
     <p> <strong>Status Laporan: </strong></p><br>
     <p>Jumlah Rombongan Belajar:</p>
     <p>Jumlah Siswa:</p><br>

@@ -9,36 +9,29 @@
 @section('content')
 <h1 class="title is-1">Data Laporan</h1>
 
-<div class="columns">
-    <div class="column">
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4">Nama Anggota</p>
+<div class="box">
+    <table id="data-table" class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th><abbr title="Position">No.</abbr></th>
+                <th><abbr title="Position">Anggota</abbr></th>
+                <th><abbr title="Position">Opsi</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{-- @foreach ($dataAnggota as $key=> $anggota) --}}
+            <tr>
+                <td></td>
+                <td> <a href="/operator/data-anggota-detail?nama-anggota="></a></td>
+                <td>
+                    <div class="buttons">
+                        <a class="button is-info is-small" href="/operator/data-anggota/ /edit">Lihat Laporan</a>
                     </div>
-                </div>
-
-                <div class="content">
-                </div>
-                <button class="button is-primary is-fullwidth">Lihat Laporan</button>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-    
-    </div>
-    <div class="column">
-    
-    </div>
-    <div class="column">
-    
-    </div>
+                </td>
+            </tr>
+            {{-- @endforeach --}}
+        </tbody>
+    </table>
 </div>
 
 

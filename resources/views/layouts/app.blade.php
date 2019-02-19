@@ -44,20 +44,16 @@
 
         <div class="container is-fullhd">
             <div class="columns is-gapless">
-
                 <div class="sidebar column is-3">
                     @yield('sidebar')
                 </div>
-
-            <div class="column is-9 main-content mt-4">
-                @include('layouts.error')
-                @include('layouts.success')
-                @yield('content')
-            </div>
-
+                <div class="column is-9 main-content mt-4">
+                    @include('layouts.error')
+                    @include('layouts.success')
+                    @yield('content')
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="{{asset('js/app.js')}}"></script>
