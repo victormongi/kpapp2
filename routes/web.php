@@ -87,3 +87,7 @@ Route::get('ptk-non-pns/laporan-harian-per-tanggal', 'PtkNonPnsController@lapora
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/login-kepala-sekolah', 'Auth\KepalaSekolahLoginController@showLoginForm')->name('kepalaSekolah.login');
+Route::get('/logout-kepala-sekolah', 'Auth\KepalaSekolahLoginController@logout')->name('kepalaSekolah.logout');
+Route::post('/login-kepala-sekolah', 'Auth\KepalaSekolahLoginController@login')->name('kepalaSekolah.login.submit');
