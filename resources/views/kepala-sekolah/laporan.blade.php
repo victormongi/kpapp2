@@ -19,17 +19,19 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($dataAnggota as $key=> $anggota) --}}
+            @foreach ($dataAnggota as $key=> $anggota)
             <tr>
-                <td></td>
-                <td> <a href="/operator/data-anggota-detail?nama-anggota="></a></td>
+                <td>{{++$key}}</td>
+                <td> <a href="/operator/data-anggota-detail?nama-anggota=">{{$anggota->nama_anggota}}</a></td>
                 <td>
                     <div class="buttons">
-                        <a class="button is-info is-small" href="/operator/data-anggota/ /edit">Lihat Laporan</a>
+                        <a class="button is-info is-small" href="/kepala-sekolah/detail-laporan?id_anggota={{$anggota->id_data_anggotas}}">Lihat
+                            Laporan</a>
                     </div>
                 </td>
             </tr>
-            {{-- @endforeach --}}
+            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
