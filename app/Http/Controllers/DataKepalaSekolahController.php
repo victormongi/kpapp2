@@ -73,8 +73,6 @@ class DataKepalaSekolahController extends Controller
             "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
         ]);
 
-
-
         DataKepalaSekolah::create(
             [
                 "nama_kepala_sekolah" => $request->post("nama_kepala_sekolah"),
@@ -147,6 +145,7 @@ class DataKepalaSekolahController extends Controller
             "wilayah" => "required",
             "bentuk_pendidikan" => "required",
             "nama_sekolah" => "required",
+            "email" => "required",
             "nama_pengguna" => "required",
             "kata_sandi" => "required",
             "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",

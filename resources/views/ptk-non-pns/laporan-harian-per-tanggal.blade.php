@@ -88,38 +88,39 @@
     <p> <strong>Tanggal Kegiatan: </strong></p>
     <p class="title">{{ \Carbon\Carbon::parse(request()->get('tgl'))->format('d, M Y') }}</p>
     <div class="box">
-        <table class="table is-fullwidth">
-            <thead>
-                <tr>
-                    <th><abbr title="Position">Jam Mulai</abbr></th>
-                    <th><abbr title="Position">Jam Selesai</abbr></th>
-                    <th><abbr title="Position">Uraian Kegiatan</abbr></th>
-                    <th><abbr title="Position">Keterangan</abbr></th>
-                    <th><abbr title="Position">Opsi</abbr></th>
-                </tr>
-            </thead>
-            <tbody>
-                <p> <strong>Status Laporan: </strong></p><br>
-                <p>Jumlah Rombongan Belajar: {{$laporan->jumlah_rombel}}</p>
-                <p>Jumlah Siswa: {{$laporan->jumlah_siswa}}</p><br>
-                @foreach ($laporanHarian as $laporan)
-                
+        <div class="table-container">
+            <table class="table is-striped is-narrow is-hoverable is-fullwidth table-container">
+                <thead>
+                    <tr>
+                        <th><abbr title="Position">Jam Mulai</abbr></th>
+                        <th><abbr title="Position">Jam Selesai</abbr></th>
+                        <th><abbr title="Position">Uraian Kegiatan</abbr></th>
+                        <th><abbr title="Position">Keterangan</abbr></th>
+                        <th><abbr title="Position">Opsi</abbr></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($laporanHarian as $laporan)
 
-                <tr>
-                    <td>{{$laporan->jam_mulai}}</td>
-                    <td>{{$laporan->jam_selesai}}</td>
-                    <td>{{$laporan->uraian_kegiatan}}</td>
-                    <td>{{$laporan->keterangan}}</td>
-                    <td>
-                        <div class="buttons">
-                            <input type="submit" class="button is-danger is-small" value="Hapus" />
-                        </div>
-                    </td>
-                </tr>
+                    <p> <strong>Status Laporan: </strong></p><br>
+                    <p>Jumlah Rombongan Belajar: {{$laporan->jumlah_rombel}}</p>
+                    <p>Jumlah Siswa: {{$laporan->jumlah_siswa}}</p><br>
 
-                @endforeach
-            </tbody>
-        </table>
+                    <tr>
+                        <td>{{$laporan->jam_mulai}}</td>
+                        <td>{{$laporan->jam_selesai}}</td>
+                        <td>{{$laporan->uraian_kegiatan}}</td>
+                        <td>{{$laporan->keterangan}}</td>
+                        <td>
+                            <div class="buttons">
+                                <input type="submit" class="button is-danger is-small" value="Hapus" />
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
     <button class="button is-primary is-small" @click="toggleShow">Tambah Laporan</button>
 </div>

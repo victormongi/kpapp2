@@ -70,7 +70,7 @@ class PtkNonPnsController extends Controller
         ];
 
         Laporan::create($dataLaporanHarian);
-        return back()->with('message', 'Laporan Berhasil di Buat');
+        return back()->with('message', 'Laporan berhasil dibuat!');
     }
 
     public function laporanHarianPerTanggal(Request $request)

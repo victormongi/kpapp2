@@ -80,7 +80,7 @@ class DataSekolahController extends Controller
             "tanggal_sk_izin_operasional" => "required",
         ]);
         DataSekolah::create($data_sekolah);
-        return back()->with('Data berhasil dimasukkan!');
+        return back()->with('Sekolah berhasil ditambahkan!');
     }
 
     /**
@@ -132,7 +132,7 @@ class DataSekolahController extends Controller
             "tanggal_sk_izin_operasional" => "required",
         ]);
         DataSekolah::findOrFail($id)->update($data);
-        return redirect('/operator/data-sekolah')->with('message', 'Data berhasil diubah!');
+        return redirect('/operator/data-sekolah')->with('message', 'Sekolah berhasil diubah!');
     }
 
     /**
@@ -147,7 +147,7 @@ class DataSekolahController extends Controller
         $dataSekolah = DataSekolah::where('id_data_sekolah', $id)->firstOrFail();
         $dataSekolah->delete();
 
-        return back();
+        return back()->with('message', 'Sekolah berhasil dihapus!');
         //
     }
 
