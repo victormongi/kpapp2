@@ -9,7 +9,7 @@
 @section('content')
 <h1 class="title is-1">Data Operator</h1>
 
-<button class="button is-primary is-large" @click="toggleShow">Tambah Data Anggota</button>
+<button class="button is-primary is-large" @click="toggleShow">Tambah Operator</button>
 
 <div class="column is-5" v-show="formShow">
     <form action="/operator/data-operator" method="post">

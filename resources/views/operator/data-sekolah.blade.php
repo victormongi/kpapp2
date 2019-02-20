@@ -151,7 +151,7 @@
 
 <div class="box">
     <div class="table-container">
-        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth table-container">
+        <table class="table is-striped is-narrow is-hoverable is-fullwidth table-container">
             <thead>
                 <tr>
                     <th><abbr title="Position">No.</abbr></th>

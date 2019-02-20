@@ -24,4 +24,7 @@
   <a class="panel-block" href="/ptk-non-pns/data-diri">Data Diri</a>
   <a class="panel-block" href="/ptk-non-pns/laporan">Laporan</a>
 
+  <br>
+    <button class="button is-block is-danger is-small is-fullwidth">Keluar</button>
+
 </nav>
