@@ -87,9 +87,6 @@
 <div>
     <p> <strong>Tanggal Kegiatan: </strong></p>
     <p class="title">{{ \Carbon\Carbon::parse(request()->get('tgl'))->format('d, M Y') }}</p>
-    <p> <strong>Status Laporan: </strong></p><br>
-    <p>Jumlah Rombongan Belajar:</p>
-    <p>Jumlah Siswa:</p><br>
     <div class="box">
         <table class="table is-fullwidth">
             <thead>
@@ -102,7 +99,11 @@
                 </tr>
             </thead>
             <tbody>
+                <p> <strong>Status Laporan: </strong></p><br>
+                <p>Jumlah Rombongan Belajar: {{$laporan->jumlah_rombel}}</p>
+                <p>Jumlah Siswa: {{$laporan->jumlah_siswa}}</p><br>
                 @foreach ($laporanHarian as $laporan)
+                
 
                 <tr>
                     <td>{{$laporan->jam_mulai}}</td>

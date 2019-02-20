@@ -52,7 +52,7 @@ class DataOperatorController extends Controller
             ]
         );
         // dd($data_operator);
-        return back()->with('message', 'sukses berhasil dinput');
+        return back()->with('message', 'Operator berhasil ditambahkan!');
     }
 
     /**
@@ -94,7 +94,7 @@ class DataOperatorController extends Controller
             "kata_sandi" => "required",
         ]);
         DataOperator::findOrFail($id)->update($data);
-        return redirect('/operator/data-operator')->with('message', 'Data berhasil diubah!');
+        return redirect('/operator/data-operator')->with('message', 'Operator berhasil diubah!');
     }
 
     /**
@@ -108,7 +108,7 @@ class DataOperatorController extends Controller
         $dataOperator = DataOperator::where('id_data_operators', $id)->firstOrFail();
         $dataOperator->delete();
 
-        return back();
+        return back()->with('message', 'Operator berhasil dihapus!');
         //
     }
 }

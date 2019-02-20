@@ -67,6 +67,7 @@ class DataKepalaSekolahController extends Controller
             "wilayah" => "required",
             "bentuk_pendidikan" => "required",
             "nama_sekolah" => "required",
+            "email" => "required",
             "nama_pengguna" => "required",
             "kata_sandi" => "required",
             "foto_url" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
@@ -82,13 +83,14 @@ class DataKepalaSekolahController extends Controller
                 "wilayah" => $request->post("wilayah"),
                 "bentuk_pendidikan" => $request->post("bentuk_pendidikan"),
                 "nama_sekolah" => $request->post("nama_sekolah"),
+                "email" => $request->post("email"),
                 "nama_pengguna" => $request->post("nama_pengguna"),
                 "kata_sandi" => $request->post("kata_sandi"),
                 "foto_url" => $filename ?? '',
             ]
         );
         // dd($filename);
-        return back()->with('sukses berhasil dinput');
+        return back()->with('Kepala Sekolah Berhasil ditambahkan!');
     }
 
     /**
@@ -166,7 +168,7 @@ class DataKepalaSekolahController extends Controller
         $s = DataKepalaSekolah::where('id_data_kepala_sekolah', $id)->firstOrFail();
         $s->delete();
 
-        return back();
+        return back()->with('message', 'Kepala Sekolah berhasil dihapus!');
     }
 
     public function getKepalaSekolahByKecamatan(Request $request)

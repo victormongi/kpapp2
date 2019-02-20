@@ -123,7 +123,7 @@ class DataAnggotaController extends Controller
             ]
         );
         // dd($data_anggota);
-        return back()->with('sukses berhasil dimasukkan');
+        return back()->with('Data Anggota berhasil dimasukkan!');
     }
 
     /**
@@ -194,7 +194,7 @@ class DataAnggotaController extends Controller
         ]);
 
         DataAnggota::findOrFail($id)->update($data);
-        return redirect('/operator/data-anggota')->with('message', 'Data Berhasil Diubah');
+        return redirect('/operator/data-anggota')->with('message', 'Data Anggota berhasil diubah!');
     }
 
     /**
@@ -209,7 +209,7 @@ class DataAnggotaController extends Controller
         $dataAnggota = DataAnggota::where('id_data_anggotas', $id)->firstOrFail();
         $dataAnggota->delete();
 
-        return back();
+        return back() ->with('message', 'Data Anggota berhasil dihapus!');
     }
 
     public function getDataAnggotaByKecamatan(Request $request)
