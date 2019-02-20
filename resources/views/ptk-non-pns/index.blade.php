@@ -7,6 +7,6 @@
 @endsection
 
 @section('content')
-<h1 class="title is-1">Data PTK Non PNS</h1>
+<h1 class="title is-1">Beranda</h1>
 
 @endsection

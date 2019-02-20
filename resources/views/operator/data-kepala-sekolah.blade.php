@@ -78,16 +78,23 @@
         <hr>
 
         <div class="field">
-            <label class="label" for="nama_pengguna">Nama Penguna/ <br> <i>Username</i> </label>
+            <label class="label" for="email">Email</label>
             <div class="control">
-                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{ old('nama_pengguna') }}">
+                <input class="input" type="text" id="email" name="email" value="{{ old('email') }}">
             </div>
         </div>
 
         <div class="field">
-            <label class="label" for="kata_sandi">Kata Sandi/ <br> <i>Password</i> </label>
+            <label class="label" for="username">Nama Penguna</label>
             <div class="control">
-                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
+                <input class="input" type="text" id="username" name="username" value="{{ old('username') }}">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label" for="password">Kata Sandi</label>
+            <div class="control">
+                <input class="input" type="password" id="password" name="password" value="{{ old('password') }}">
             </div>
         </div>
 
@@ -111,11 +118,7 @@
             </div>
         </div>
 
-
         <br>
-
-
-
         <div class="field is-grouped">
             <p class="control">
                 <input class="button is-link" type="submit" value="Submit">
@@ -141,7 +144,6 @@
                 <th><abbr title="Position">No.</abbr></th>
                 <th><abbr title="Position">Wilayah</abbr></th>
                 <th><abbr title="Position">Jumlah</abbr></th>
-
             </tr>
         </thead>
         <tbody>

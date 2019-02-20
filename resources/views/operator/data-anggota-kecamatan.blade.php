@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<h1 class="title is-1">Data Anggota Kecamatan</h1>
+<h1 class="title is-1">Data Anggota</h1>
 
 <div>
     <table id="data-table" class="table is-fullwidth">

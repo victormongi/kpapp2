@@ -1,5 +1,8 @@
 <nav class="panel panel-sidebar">
 
+    <button class="button is-block is-danger is-small is-fullwidth">Keluar</button>
+    <br>
+    
     <p class="panel-heading">
       Operator
     </p>
@@ -17,9 +20,10 @@
       
       </div>
     </a>
-
+ 
     <a class="panel-block" href="/kepala-sekolah">Dasbor </a>
     <a class="panel-block" href="/kepala-sekolah/data-diri">Data Diri</a>
     <a class="panel-block" href="/kepala-sekolah/laporan">Laporan</a>
+
 
   </nav>

@@ -219,4 +219,12 @@ class DataAnggotaController extends Controller
         // dd($dataAnggota);
         return view('operator.data-anggota-kecamatan', compact('dataAnggota'));
     }
+
+    public function getDetailAnggotaByNamaAnggota(Request $request)
+    {
+        $req = $request->get('nama-anggota');
+        $s = DataAnggota::where('nama_anggota', $req)->first();
+        return view('operator.data-anggota-detail', compact('s'));
+    }
+
 }

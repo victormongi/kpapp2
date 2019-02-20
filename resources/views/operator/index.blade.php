@@ -7,7 +7,11 @@
 @endsection
 
 @section('content')
-  <h1 class="title is-1">Dasbor Operator</h1>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam et minima, dolorem explicabo necessitatibus impedit ducimus accusantium consequuntur optio at, ipsa rem? At eveniet consectetur, non ad atque quisquam excepturi.</p>
+
+@section('sidebar')
+   @include('operator.sidebar')
+@endsection
+
+<h1 class="title is-1">Beranda</h1>
   
 @endsection

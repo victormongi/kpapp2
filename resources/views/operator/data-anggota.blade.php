@@ -161,17 +161,26 @@
             </div>
         </div>
 
+        <hr>
+
         <div class="field">
-            <label class="label" for="nama_pengguna">Nama Penguna/ <br> <i>Username</i> </label>
+            <label class="label" for="email">Email</label>
             <div class="control">
-                <input class="input" type="text" id="nama_pengguna" name="nama_pengguna" value="{{ old('nama_pengguna') }}">
+                <input class="input" type="text" id="email" name="email" value="{{ old('email') }}">
             </div>
         </div>
 
         <div class="field">
-            <label class="label" for="kata_sandi">Kata Sandi/ <br> <i>Password</i> </label>
+            <label class="label" for="username">Nama Penguna</label>
             <div class="control">
-                <input class="input" type="password" id="kata_sandi" name="kata_sandi" value="{{ old('kata_sandi') }}">
+                <input class="input" type="text" id="username" name="username" value="{{ old('username') }}">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label" for="password">Kata Sandi</label>
+            <div class="control">
+                <input class="input" type="password" id="password" name="password" value="{{ old('password') }}">
             </div>
         </div>
 
@@ -212,68 +221,71 @@
 <br><br>
 
 <div class="box">
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <th><abbr title="Position">No.</abbr></th>
-                <th><abbr title="Position">Wilayah</abbr></th>
-                <th><abbr title="Position">Jumlah</abbr></th>
-                <th><abbr title="Position">TK/PAUD</abbr></th>
-                <th><abbr title="Position">SD</abbr></th>
-                <th><abbr title="Position">SMP</abbr></th>
+    <div class="table-container">
+        <table class="table is-striped is-narrow is-hoverable is-fullwidth table-container">
+            <thead>
+                <tr>
+                    <th><abbr title="Position">No.</abbr></th>
+                    <th><abbr title="Position">Wilayah</abbr></th>
+                    <th><abbr title="Position">Jumlah</abbr></th>
+                    <th><abbr title="Position">TK/PAUD</abbr></th>
+                    <th><abbr title="Position">SD</abbr></th>
+                    <th><abbr title="Position">SMP</abbr></th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
-                <td>{{ $dataAnggota2->jumlahAnggotaTomohonUtara }}</td>
-                <td>{{ $dataAnggota2->jumlahTKTomohonUtara }}</td>
-                <td>{{ $dataAnggota2->jumlahSDTomohonUtara }}</td>
-                <td>{{ $dataAnggota2->jumlahSMPTomohonUtara }}</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Selatan">Kec. Tomohon Selatan</a></td>
-                <td>{{ $dataAnggota2->jumlahAnggotaTomohonSelatan }}</td>
-                <td>{{ $dataAnggota2->jumlahTKTomohonSelatan }}</td>
-                <td>{{ $dataAnggota2->jumlahSDTomohonSelatan }}</td>
-                <td>{{ $dataAnggota2->jumlahSMPTomohonSelatan }}</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Tengah">Kec. Tomohon Tengah</a></td>
-                <td>{{ $dataAnggota2->jumlahAnggotaTomohonTengah }}</td>
-                <td>{{ $dataAnggota2->jumlahTKTomohonTengah }}</td>
-                <td>{{ $dataAnggota2->jumlahSDTomohonTengah }}</td>
-                <td>{{ $dataAnggota2->jumlahSMPTomohonTengah }}</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Barat">Kec. Tomohon Barat</a></td>
-                <td>{{ $dataAnggota2->jumlahAnggotaTomohonBarat }}</td>
-                <td>{{ $dataAnggota2->jumlahTKTomohonBarat }}</td>
-                <td>{{ $dataAnggota2->jumlahSDTomohonBarat }}</td>
-                <td>{{ $dataAnggota2->jumlahSMPTomohonBarat }}</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Timur">Kec. Tomohon Timur</a></td>
-                <td>{{ $dataAnggota2->jumlahAnggotaTomohonTimur }}</td>
-                <td>{{ $dataAnggota2->jumlahTKTomohonTimur }}</td>
-                <td>{{ $dataAnggota2->jumlahSDTomohonTimur }}</td>
-                <td>{{ $dataAnggota2->jumlahSMPTomohonTimur }}</td>
-            </tr>
-            <tr>
-                <td></td>
-                <th>Total</th>
-                <td>{{ $dataAnggota2->totalAnggota }}</td>
-                <td>{{ $dataAnggota2->totalTK }}</td>
-                <td>{{ $dataAnggota2->totalSD }}</td>
-                <td>{{ $dataAnggota2->totalSMP }}</td>
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Utara">Kec. Tomohon Utara</a></td>
+                    <td>{{ $dataAnggota2->jumlahAnggotaTomohonUtara }}</td>
+                    <td>{{ $dataAnggota2->jumlahTKTomohonUtara }}</td>
+                    <td>{{ $dataAnggota2->jumlahSDTomohonUtara }}</td>
+                    <td>{{ $dataAnggota2->jumlahSMPTomohonUtara }}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Selatan">Kec. Tomohon Selatan</a></td>
+                    <td>{{ $dataAnggota2->jumlahAnggotaTomohonSelatan }}</td>
+                    <td>{{ $dataAnggota2->jumlahTKTomohonSelatan }}</td>
+                    <td>{{ $dataAnggota2->jumlahSDTomohonSelatan }}</td>
+                    <td>{{ $dataAnggota2->jumlahSMPTomohonSelatan }}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Tengah">Kec. Tomohon Tengah</a></td>
+                    <td>{{ $dataAnggota2->jumlahAnggotaTomohonTengah }}</td>
+                    <td>{{ $dataAnggota2->jumlahTKTomohonTengah }}</td>
+                    <td>{{ $dataAnggota2->jumlahSDTomohonTengah }}</td>
+                    <td>{{ $dataAnggota2->jumlahSMPTomohonTengah }}</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Barat">Kec. Tomohon Barat</a></td>
+                    <td>{{ $dataAnggota2->jumlahAnggotaTomohonBarat }}</td>
+                    <td>{{ $dataAnggota2->jumlahTKTomohonBarat }}</td>
+                    <td>{{ $dataAnggota2->jumlahSDTomohonBarat }}</td>
+                    <td>{{ $dataAnggota2->jumlahSMPTomohonBarat }}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="/operator/data-anggota-kecamatan?kec=Tomohon%20Timur">Kec. Tomohon Timur</a></td>
+                    <td>{{ $dataAnggota2->jumlahAnggotaTomohonTimur }}</td>
+                    <td>{{ $dataAnggota2->jumlahTKTomohonTimur }}</td>
+                    <td>{{ $dataAnggota2->jumlahSDTomohonTimur }}</td>
+                    <td>{{ $dataAnggota2->jumlahSMPTomohonTimur }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>Total</th>
+                    <td>{{ $dataAnggota2->totalAnggota }}</td>
+                    <td>{{ $dataAnggota2->totalTK }}</td>
+                    <td>{{ $dataAnggota2->totalSD }}</td>
+                    <td>{{ $dataAnggota2->totalSMP }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
+
 @endsection
