@@ -45,9 +45,10 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
-        'kepalaSekolah' => [
+
+        'dataKepalaSekolah' => [
             'driver' => 'session',
-            'provider' => 'kepalaSekolah',
+            'provider' => 'dataKepalaSekolah',
         ],
     ],
 
@@ -73,9 +74,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-        'kepalaSekolah' => [
+        'dataKepalaSekolah' => [
             'driver' => 'eloquent',
-            'model' => App\KepalaSekolah::class,
+            'model' => App\DataKepalaSekolah::class,
         ],
 
         // 'users' => [

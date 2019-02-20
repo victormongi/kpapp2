@@ -61,15 +61,12 @@ Route::get('operator/laporan-detail-anggota', function () {
 
 // KEPALA SEKOLAH
 
-Route::get('kepala-sekolah', function () {
-    return view('kepala-sekolah.index');
-});
+Route::get('kepala-sekolah', 'KepalaSekolahController@index');
 
-Route::get('kepala-sekolah/data-diri', function () {
-    return view('kepala-sekolah.data-diri');
-});
+Route::get('kepala-sekolah/data-diri', 'KepalaSekolahController@dataDiri');
 
 Route::get('kepala-sekolah/laporan', 'KepalaSekolahController@lihatSemuaPtk');
+Route::get('kepala-sekolah/detail-laporan', 'KepalaSekolahController@detailLaporan');
 
 Route::get('kepala-sekolah/laporan-validasi', function () {
     return view('kepala-sekolah.laporan-validasi');
@@ -87,3 +84,7 @@ Route::get('ptk-non-pns/laporan-harian-per-tanggal', 'PtkNonPnsController@lapora
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/login-kepala-sekolah', 'Auth\KepalaSekolahLoginController@showLoginForm')->name('kepalaSekolah.login');
+Route::get('/logout-kepala-sekolah', 'Auth\KepalaSekolahLoginController@logout')->name('kepalaSekolah.logout');
+Route::post('/login-kepala-sekolah', 'Auth\KepalaSekolahLoginController@login')->name('kepalaSekolah.login.submit');
