@@ -10,7 +10,7 @@ class DataKepalaSekolah extends Authenticatable
     use Notifiable;
 
     protected $primaryKey = 'id_data_kepala_sekolah';
-    protected $fillable = ['username', 'password', 'nama_kepala_sekolah', 'alamat', 'wilayah', 'bentuk_pendidikan', 'nama_sekolah', 'foto_url', 'nomor_hp'];
+    protected $fillable = ['email','username', 'password', 'nama_kepala_sekolah', 'alamat', 'wilayah', 'bentuk_pendidikan', 'nama_sekolah', 'foto_url', 'nomor_hp'];
 
     protected $guard = 'dataKepalaSekolah';
 

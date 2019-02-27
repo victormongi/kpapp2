@@ -20,7 +20,7 @@
   </a>
   
 
-  <a class="panel-block" href="/ptk-non-pns">Dasbor </a>
+  <a class="panel-block" href="/ptk-non-pns">Beranda </a>
   <a class="panel-block" href="/ptk-non-pns/data-diri">Data Diri</a>
   <a class="panel-block" href="/ptk-non-pns/laporan">Laporan</a>
 

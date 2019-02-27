@@ -14,8 +14,7 @@
 <div class="tile is-ancestor">
     <div class="tile is-parent">
         <article class="tile is-child">
-            <p class="subtitle">Jumat,</p>
-            <p class="title">20 Februari 2019</p>
+            <p class="title">{{ \Carbon\Carbon::parse(request()->get('tgl'))->format('d M Y') }}</p>
             <div class="content">
 
             </div>
@@ -31,65 +30,66 @@
 
 <div class="box">
     <div class="table-container">
-        <article class="tile is-child">
-            <form action="/ptk-non-pns/laporan" method="get">
+        <table class="table is-striped is-narrow is-hoverable is-fullwidth table-container">
+            <article class="tile is-child">
+                <form action="/ptk-non-pns/laporan" method="get">
 
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <div class="select is-fullwidth">
-                            <select name="tahun">
-                                <option value="2019">2019</option>
-                                <option value="2018">2018</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control is-expanded">
-                        <div class="select is-fullwidth">
-                            <select name="bulan">
-                                <option value="1">Januari</option>
-                                <option value="2">Februari</option>
-                                <option value="3">Maret</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <button type="submit" class="button is-primary">Sort</button>
-                    </div>
-                </div>
-
-
-            </form>
-
-
-            <table class="table is-fullwidth">
-                <thead>
-                    <tr>
-                        <th><abbr title="Position">Tanggal Kegiatan</abbr></th>
-                        <th><abbr title="Position">Status</abbr></th>
-                        <th><abbr title="Position">Opsi</abbr></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($laporanHarian as $laporan)
-
-                    <tr>
-                        <td>{{$laporan->tanggal_kegiatan}}</td>
-                        <td>Disetujui</td>
-                        <td>
-                            <div class="buttons">
-                                <a class="button is-info is-small" href="/ptk-non-pns/laporan-harian-per-tanggal?tgl={{$laporan->tanggal_kegiatan}}">Ubah</a>
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <div class="select is-fullwidth">
+                                <select name="tahun">
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                </select>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                        <div class="control is-expanded">
+                            <div class="select is-fullwidth">
+                                <select name="bulan">
+                                    <option value="1">Januari</option>
+                                    <option value="2">Februari</option>
+                                    <option value="3">Maret</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <button type="submit" class="button is-primary">Sort</button>
+                        </div>
+                    </div>
 
-                    @endforeach
-                </tbody>
-            </table>
-        </article>
 
+                </form>
+
+
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th><abbr title="Position">Tanggal Kegiatan</abbr></th>
+                            <th><abbr title="Position">Status</abbr></th>
+                            <th><abbr title="Position">Opsi</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($laporanHarian as $laporan)
+
+                        <tr>
+                            <td>{{$laporan->tanggal_kegiatan}}</td>
+                            <td>Disetujui</td>
+                            <td>
+                                <div class="buttons">
+                                    <a class="button is-info is-small" href="/ptk-non-pns/laporan-harian-per-tanggal?tgl={{$laporan->tanggal_kegiatan}}">Ubah</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        @endforeach
+                    </tbody>
+                </table>
+            </article>
+        </table>
     </div>
 </div>
 
 
 
-    @endsection
+@endsection
